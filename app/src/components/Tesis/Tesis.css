@@ -1,0 +1,29 @@
+.tesis {
+  padding: 12rem 2rem;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .tesis {
+    padding: 12rem 6rem;
+  }
+}
+
+.tesis__title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #000000;
+  max-width: 64rem;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .tesis__title {
+    font-size: 3.75rem;
+  }
+}

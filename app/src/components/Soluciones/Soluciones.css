@@ -1,0 +1,147 @@
+.soluciones {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: var(--surface-container-lowest);
+}
+
+.soluciones__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 6rem;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .soluciones__header {
+    flex-direction: row;
+  }
+}
+
+.soluciones__header-text {
+  max-width: 40rem;
+}
+
+.soluciones__label {
+  font-size: 0.875rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.soluciones__subtitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/* Cards Grid */
+.soluciones__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+}
+
+@media (min-width: 768px) {
+  .soluciones__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.soluciones__card {
+  background-color: var(--surface-container);
+  padding: 3rem;
+  aspect-ratio: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 500ms;
+  min-height: 24rem;
+}
+
+@media (min-width: 768px) {
+  .soluciones__card {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+.soluciones__card:hover {
+  background-color: var(--surface-container-high);
+}
+
+.soluciones__card--medium {
+  background-color: rgba(32, 31, 31, 0.5);
+  opacity: 0.8;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.soluciones__card--medium:hover {
+  background-color: rgba(32, 31, 31, 0.6);
+}
+
+.soluciones__card--low {
+  background-color: rgba(32, 31, 31, 0.3);
+  opacity: 0.6;
+}
+
+.soluciones__card--low:hover {
+  background-color: rgba(32, 31, 31, 0.4);
+}
+
+.soluciones__card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.soluciones__card-title--dimmed {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.soluciones__card-desc {
+  color: var(--on-surface-variant);
+  font-weight: 300;
+  line-height: 1.625;
+}
+
+.soluciones__card-desc--dimmed {
+  color: rgba(198, 198, 198, 0.4);
+}
+
+/* CTA */
+.soluciones__card-cta {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #ffffff;
+}
+
+.soluciones__card-line {
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  background: #ffffff;
+  transition: width 300ms;
+}
+
+.soluciones__card-cta:hover .soluciones__card-line {
+  width: 4rem;
+}
+
+.soluciones__card-soon {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.2);
+  font-style: italic;
+}
