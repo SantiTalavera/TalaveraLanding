@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TALAVERA | Sistemas para Operaciones Complejas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#131313",
+              "primary-fixed": "#5d5f5f",
+              "secondary": "#c7c6c6",
+              "on-surface": "#e5e2e1",
+              "tertiary": "#e4e2e1",
+              "surface-dim": "#131313",
+              "on-tertiary-fixed": "#ffffff",
+              "primary": "#ffffff",
+              "tertiary-fixed": "#5f5e5e",
+              "surface-bright": "#3a3939",
+              "on-secondary-container": "#e3e2e2",
+              "on-primary-fixed": "#ffffff",
+              "on-tertiary-fixed-variant": "#e4e2e1",
+              "primary-fixed-dim": "#454747",
+              "secondary-fixed": "#c7c6c6",
+              "surface-tint": "#c6c6c7",
+              "on-error": "#690005",
+              "on-primary": "#1a1c1c",
+              "on-secondary-fixed": "#1a1c1c",
+              "surface-container": "#201f1f",
+              "surface-container-highest": "#353534",
+              "primary-container": "#d4d4d4",
+              "surface": "#131313",
+              "inverse-primary": "#5d5f5f",
+              "on-surface-variant": "#c6c6c6",
+              "tertiary-fixed-dim": "#474747",
+              "surface-variant": "#353534",
+              "error-container": "#93000a",
+              "on-tertiary": "#1b1c1c",
+              "outline": "#919191",
+              "on-secondary": "#1a1c1c",
+              "on-primary-fixed-variant": "#e2e2e2",
+              "surface-container-low": "#1c1b1b",
+              "surface-container-high": "#2a2a2a",
+              "error": "#ffb4ab",
+              "secondary-container": "#464747",
+              "inverse-on-surface": "#313030",
+              "on-primary-container": "#000000",
+              "on-tertiary-container": "#000000",
+              "outline-variant": "#474747",
+              "surface-container-lowest": "#0e0e0e",
+              "secondary-fixed-dim": "#ababab",
+              "on-secondary-fixed-variant": "#3a3c3c",
+              "inverse-surface": "#e5e2e1",
+              "on-error-container": "#ffdad6",
+              "tertiary-container": "#929090",
+              "on-background": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #0e0e0e; color: #ffffff; font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
+        .text-monolith { letter-spacing: -0.04em; line-height: 0.9; }
+        .vertical-text { writing-mode: vertical-rl; transform: rotate(180deg); }
+        .mask-gradient { mask-image: linear-gradient(to bottom, black 50%, transparent 100%); }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation -->
+<nav class="fixed top-0 z-50 flex justify-between items-center w-full px-8 md:px-12 py-8 bg-black/80 backdrop-blur-xl">
+<div class="text-2xl font-extrabold tracking-tighter text-white">TALAVERA</div>
+<div class="hidden md:flex gap-12">
+<a class="font-['Manrope'] text-sm tracking-widest uppercase font-medium text-[#c6c6c6] hover:text-white transition-colors duration-150" href="#">Sistema</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase font-medium text-[#c6c6c6] hover:text-white transition-colors duration-150" href="#">Soluciones</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase font-medium text-[#c6c6c6] hover:text-white transition-colors duration-150" href="#">Método</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase font-medium text-[#c6c6c6] hover:text-white transition-colors duration-150" href="#">Contacto</a>
+</div>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase font-medium px-6 py-2 border border-white/20 hover:bg-white hover:text-black transition-all duration-300" href="#">Diagnóstico estratégico</a>
+</nav>
+<main>
+<!-- Section 1: Hero -->
+<section class="relative min-h-screen flex flex-col justify-center items-start px-8 md:px-24 overflow-hidden border-b border-white/5">
+<div class="absolute inset-0 z-0 opacity-20">
+<img alt="" class="w-full h-full object-cover grayscale brightness-50" data-alt="Abstract architectural lines of a skyscraper looking up, monochromatic, high contrast shadows and sharp edges in a deep void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA14E0-OOHcL1XoiuRzDZgs8tOjDe6SaOhWwjGpo-4OwnN8wGecJbZSSfbxOEq7cDBD0TgIU53_w5K3cNJHwH1MctQLT7tp6-76kYw8C1EVtfkw5tKAXPOsppSzNyAwfoRlypGWbkGwYzy3KqIDT2KqBkZ8LC0NwYEF7R5FXtfk-hL3Wa8MCfG44KJ9yKAy4foFTkLn5p8QMZhj0iKpHIxcXKbwSeHkLUNZC1rSNtPlwKMHUQ3i-P5C01inLVAPZ7rcXnXh6OSqPQI7"/>
+</div>
+<div class="relative z-10 max-w-5xl space-y-12">
+<p class="text-sm tracking-[0.4em] uppercase font-light text-secondary/60">Sistemas de Operación</p>
+<h1 class="text-5xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-white">
+                Sistemas para ordenar operaciones complejas en real estate.
+            </h1>
+<p class="text-lg md:text-xl font-light text-on-surface-variant max-w-3xl leading-relaxed">Diseño e implemento estructuras con trazabilidad, control y claridad para organizaciones donde Excel y WhatsApp ya no alcanzan, especialmente en operaciones con múltiples actores, decisiones y flujo de información crítico.<br/><br/><span class="block pt-4">Cuando esto no está resuelto, aparecen conflictos, pérdida de control y decisiones que impactan directamente en el negocio.</span></p>
+<div class="flex flex-col md:flex-row items-start md:items-center gap-8 pt-8">
+<button class="bg-primary text-on-primary px-10 py-5 text-sm tracking-widest uppercase font-bold hover:bg-secondary transition-colors duration-300">
+                    Ver soluciones
+                </button>
+<a class="text-sm tracking-widest uppercase font-medium border-b border-white/20 pb-1 hover:border-white transition-all" href="#">
+                    Ver cómo funciona
+                </a>
+</div>
+</div>
+<!-- Side Label -->
+<div class="absolute right-12 bottom-24 hidden lg:block">
+<p class="vertical-text text-[10px] tracking-[1em] uppercase text-white/20 font-light">Talavera Strategic Systems — MMXXIV</p>
+</div>
+</section>
+<!-- Section 2: El Problema -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-lowest grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-5">
+<h2 class="text-sm tracking-[0.3em] uppercase font-bold text-white mb-8">El diagnóstico</h2>
+<h3 class="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">El problema no es la herramienta.</h3>
+</div>
+<div class="md:col-start-7 md:col-span-6 flex flex-col justify-end space-y-12">
+<p class="text-2xl md:text-3xl font-light text-on-surface-variant">Es la forma en la que está organizada la operación.</p>
+<div class="space-y-6 mb-8"><p class="text-xl font-medium text-white">Si hoy:</p>
+<ul class="space-y-2 text-on-surface-variant font-light">
+<li>— manejás información en Excel</li>
+<li>— coordinás procesos por WhatsApp</li>
+<li>— tomás decisiones sin historial claro</li>
+<li>— dependés de personas clave para que todo funcione</li>
+</ul>
+<p class="text-lg text-on-surface-variant font-light leading-relaxed pt-4">Todo esto escala mal. Y cuanto más crece la operación, peor funciona.</p></div>
+<ul class="space-y-6 pt-8 border-t border-white/10"><p class="text-xl font-medium text-white">Si hoy:</p>
+<ul class="space-y-2 text-on-surface-variant font-light">
+<li>— manejás información en Excel</li>
+<li>— coordinás procesos por WhatsApp</li>
+<li>— tomás decisiones sin historial claro</li>
+<li>— dependés de personas clave para que todo funcione</li>
+</ul>
+<p class="text-lg text-on-surface-variant font-light leading-relaxed pt-4">Todo esto escala mal. Y cuanto más crece la operación, peor funciona.</p></ul>
+</div>
+</section>
+<!-- Section 3: Tesis -->
+<section class="py-48 px-8 md:px-24 bg-white flex items-center justify-center text-center">
+<h2 class="text-3xl md:text-6xl font-extrabold text-black max-w-5xl tracking-tight leading-tight">
+            El software no debería agregar complejidad. Debería ordenar todo.
+        </h2>
+</section>
+<!-- NEW SECTION: Filtering Block -->
+<section class="py-32 px-8 md:px-24 bg-surface border-b border-white/5">
+<div class="max-w-4xl mx-auto space-y-12">
+<p class="text-sm tracking-[0.4em] uppercase font-bold text-white/40 mb-4">Este tipo de problema aparece en operaciones que ya alcanzaron cierto nivel de complejidad.</p><h3 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white">No es para todos.</h3>
+<div class="space-y-8">
+<p class="text-2xl md:text-3xl font-light text-on-surface-variant">Trabajo con organizaciones donde:</p>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="text-white font-bold">—</span>
+<p class="text-xl md:text-2xl font-medium text-white">hay múltiples actores tomando decisiones</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="text-white font-bold">—</span>
+<p class="text-xl md:text-2xl font-medium text-white">la operación impacta en dinero y conflictos</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="text-white font-bold">—</span>
+<p class="text-xl md:text-2xl font-medium text-white">el desorden ya empezó a ser un problema real</p>
+</li>
+</ul>
+<p class="text-xl text-on-surface-variant/60 font-light italic pt-8 border-t border-white/10">Si ese no es el caso, esto probablemente no sea necesario.</p>
+</div>
+</div>
+</section>
+<!-- Section 4: Qué Hago -->
+<section class="py-32 px-8 md:px-24 bg-surface border-b border-white/5">
+<div class="max-w-7xl mx-auto">
+<p class="text-sm tracking-[0.4em] uppercase font-bold text-white/40 mb-16">Propósito</p>
+<p class="text-sm tracking-[0.4em] uppercase font-bold text-white/40 mb-4">Este tipo de problema aparece en operaciones que ya alcanzaron cierto nivel de complejidad.</p><h3 class="text-4xl font-bold mb-24">Diseño sistemas que:</h3>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-4">
+<div class="space-y-4">
+<p class="text-4xl font-bold text-white/20">01</p>
+<h4 class="text-xl font-bold uppercase tracking-widest border-t border-white/10 pt-6">Estructuran procesos</h4>
+</div>
+<div class="space-y-4">
+<p class="text-4xl font-bold text-white/20">02</p>
+<h4 class="text-xl font-bold uppercase tracking-widest border-t border-white/10 pt-6">Registran decisiones</h4>
+</div>
+<div class="space-y-4">
+<p class="text-4xl font-bold text-white/20">03</p>
+<h4 class="text-xl font-bold uppercase tracking-widest border-t border-white/10 pt-6">Eliminan fricción</h4>
+</div>
+<div class="space-y-4">
+<p class="text-4xl font-bold text-white/20">04</p>
+<h4 class="text-xl font-bold uppercase tracking-widest border-t border-white/10 pt-6">Permiten escalar</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Soluciones (Editorial Cards) -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-sm tracking-[0.4em] uppercase font-bold text-white mb-8">Soluciones</h2>
+<p class="text-4xl font-bold tracking-tight">Arquitectura aplicada a segmentos específicos.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<!-- Card 1 -->
+<div class="bg-surface-container p-12 aspect-[4/5] flex flex-col justify-between hover:bg-surface-container-high transition-colors duration-500">
+<div>
+<h4 class="text-2xl font-bold mb-6">HOAs / Clubes de campo</h4>
+<p class="text-on-surface-variant font-light leading-relaxed">Ordena la comercialización, elimina conflictos en reservas y da trazabilidad completa sobre cada decisión dentro del sistema. Permite operar con claridad, reducir conflictos internos y tomar decisiones con información real.</p>
+</div>
+<button class="text-xs tracking-[0.3em] uppercase font-bold flex items-center gap-4 group">Ver sistema 
+                    <span class="w-8 h-[1px] bg-white group-hover:w-16 transition-all"></span></button>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container/50 p-12 aspect-[4/5] flex flex-col justify-between opacity-80 border-x border-white/5">
+<div>
+<h4 class="text-2xl font-bold mb-6 text-white/40">Desarrollos inmobiliarios</h4>
+<p class="text-on-surface-variant/40 font-light leading-relaxed">Control y estructura en la gestión de unidades y decisiones estratégicas.</p>
+</div>
+<span class="text-xs tracking-[0.3em] uppercase font-bold text-white/20 italic">Próximamente</span>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container/30 p-12 aspect-[4/5] flex flex-col justify-between opacity-60">
+<div>
+<h4 class="text-2xl font-bold mb-6 text-white/20">Administración / operación</h4>
+<p class="text-on-surface-variant/20 font-light leading-relaxed">Sistemas integrados para operar equipos masivos con claridad y control absoluto.</p>
+</div>
+<span class="text-xs tracking-[0.3em] uppercase font-bold text-white/10 italic">Próximamente</span>
+</div>
+</div>
+</section>
+<!-- Section 6: Principios -->
+<section class="py-32 px-8 md:px-24 bg-surface border-t border-white/5 flex flex-col md:flex-row gap-24">
+<div class="md:w-1/3">
+<h2 class="text-sm tracking-[0.4em] uppercase font-bold text-white">Principios</h2>
+</div>
+<div class="md:w-2/3">
+<div class="space-y-16">
+<div class="group">
+<p class="text-3xl md:text-5xl font-light tracking-tight group-hover:pl-8 transition-all duration-500 border-l-0 group-hover:border-l-4 border-white">Sin trazabilidad no hay control.</p>
+</div>
+<div class="group">
+<p class="text-3xl md:text-5xl font-light tracking-tight group-hover:pl-8 transition-all duration-500 border-l-0 group-hover:border-l-4 border-white">Sin sistema hay conflicto.</p>
+</div>
+<div class="group">
+<p class="text-3xl md:text-5xl font-light tracking-tight group-hover:pl-8 transition-all duration-500 border-l-0 group-hover:border-l-4 border-white">El software debe simplificar, no complicar.</p>
+</div>
+<div class="group">
+<p class="text-3xl md:text-5xl font-light tracking-tight group-hover:pl-8 transition-all duration-500 border-l-0 group-hover:border-l-4 border-white">La implementación define el resultado.</p>
+</div>
+<div class="group">
+<p class="text-3xl md:text-5xl font-light tracking-tight group-hover:pl-8 transition-all duration-500 border-l-0 group-hover:border-l-4 border-white">Ordenar la operación impacta en el negocio.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Credibilidad (Editorial Layout) -->
+<section class="py-48 px-8 md:px-24 bg-surface-container-lowest relative overflow-hidden">
+<div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-24 items-center">
+<div class="w-full md:w-1/2 aspect-square bg-surface-container overflow-hidden">
+<img alt="Arquitectura" class="w-full h-full object-cover grayscale opacity-60" data-alt="Monochromatic close up of architectural concrete stairs with dramatic shadows and light, minimalist geometric composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGwordVfo7nzjDT_NwvS019x8r3ywjrdTy37M0IgOEXfqnLfypiQ4DOOfzqi6MxOMUteNe2xKe8vSugAhbc4fvBvDdKNS2CdWCwbTesORC-Rrwiiw35TbF8FUgzrzkOsodjvnzByxcdX6-sTMsx2enRS0C6KXqkLleINoxIsjuXcm3WL_-xyB3RjBxuRjwkz82DIWps9jvULmK4uQy3SJ3NTk524k_Y41-nXtFaK_Yv4jqOlIfkVRraHcmxbC_HjpJwv0IfzdIfICi"/>
+</div>
+<div class="w-full md:w-1/2 space-y-8">
+<p class="text-xl font-light leading-relaxed text-on-surface-variant italic">
+                    "No trabajo sobre supuestos. Trabajo sobre problemas reales que hoy se resuelven con Excel, WhatsApp y procesos desordenados, especialmente en entornos donde la operación impacta directamente en dinero, decisiones y conflictos."
+                </p>
+<p class="text-xl font-bold text-white tracking-tight leading-relaxed">
+                    El enfoque no es agregar software. Es construir sistema.
+                </p>
+</div>
+</div>
+</section>
+<!-- Section 8: CTA Final -->
+<section class="py-48 px-8 md:px-24 bg-white text-black text-center">
+<div class="max-w-4xl mx-auto space-y-12"><p class="text-sm tracking-[0.4em] uppercase font-bold text-black/40 mb-4">Esto no se resuelve con otra herramienta. Se resuelve diseñando el sistema correcto.</p>
+<h2 class="text-4xl md:text-6xl font-extrabold tracking-tighter">
+                Si tu operación depende de herramientas sueltas, el problema no es menor. Probablemente ya lo estés sintiendo en tiempo, decisiones o conflictos.
+            </h2>
+<div class="flex flex-col md:flex-row justify-center gap-6 pt-12">
+<button class="bg-black text-white px-12 py-6 text-sm tracking-[0.2em] uppercase font-bold hover:bg-zinc-800 transition-all">
+                    Explorar solución HOAs
+                </button>
+<button class="border border-black text-black px-12 py-6 text-sm tracking-[0.2em] uppercase font-bold hover:bg-black hover:text-white transition-all">
+                    Solicitar diagnóstico
+                </button>
+</div></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-black text-white border-t border-white/10 px-8 md:px-12 py-24">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
+<div class="space-y-6">
+<p class="text-3xl font-extrabold tracking-tighter">TALAVERA</p>
+<p class="text-[10px] tracking-widest uppercase text-on-surface-variant max-w-xs">
+                Consultoría de sistemas y optimización de procesos operativos para real estate.
+            </p>
+</div>
+<div class="flex flex-col items-start md:items-end gap-4">
+<div class="flex gap-8 mb-8">
+<a class="font-['Manrope'] text-[10px] tracking-widest uppercase text-[#c6c6c6] hover:text-white transition-colors duration-150" href="#">Sitemap</a>
+<a class="font-['Manrope'] text-[10px] tracking-widest uppercase text-[#c6c6c6] hover:text-white transition-colors duration-150" href="#">Privacidad</a>
+<a class="font-['Manrope'] text-[10px] tracking-widest uppercase text-[#c6c6c6] hover:text-white transition-colors duration-150" href="#">Legal</a>
+</div>
+<p class="font-['Manrope'] text-[10px] tracking-widest uppercase text-[#c6c6c6]">
+                © 2024 TALAVERA. Todos los derechos reservados.
+            </p>
+</div>
+</div>
+</footer>
+</body></html>
