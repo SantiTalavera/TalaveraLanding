@@ -61,11 +61,13 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 700;
-  transition: background-color 300ms;
+  transition: background-color 200ms linear, box-shadow 200ms linear, transform 200ms linear;
 }
 
 .cta-final__btn-primary:hover {
-  background: #3f3f46;
+  background: #000000;
+  box-shadow: var(--button-glow-dark);
+  transform: translateY(var(--button-lift)) scale(var(--button-hover-scale));
 }
 
 .cta-final__btn-primary:focus-visible,
@@ -88,4 +90,6 @@
 .cta-final__btn-secondary:hover {
   background: #000000;
   color: #ffffff;
+  box-shadow: var(--button-glow-dark);
+  transform: translateY(var(--button-lift)) scale(var(--button-hover-scale));
 }

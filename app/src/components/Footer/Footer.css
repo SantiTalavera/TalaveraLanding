@@ -111,12 +111,13 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 800;
-  transition: background-color 150ms linear, transform 150ms linear;
+  transition: background-color 150ms linear, box-shadow 150ms linear, transform 150ms linear;
 }
 
 .footer__cta:hover {
-  background: #d8d8d8;
-  transform: translateY(-1px);
+  background: #ffffff;
+  box-shadow: var(--button-glow-light);
+  transform: translateY(var(--button-lift)) scale(var(--button-hover-scale));
 }
 
 .footer__contact-copy {

@@ -156,7 +156,7 @@
   font-weight: 800;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  transition: background-color 150ms linear, color 150ms linear;
+  transition: background-color 150ms linear, color 150ms linear, box-shadow 150ms linear, transform 150ms linear;
 }
 
 .diagnostic-dialog__submit {
@@ -165,7 +165,9 @@
 }
 
 .diagnostic-dialog__submit:hover {
-  background: #d8d8d8;
+  background: #ffffff;
+  box-shadow: var(--button-glow-light);
+  transform: translateY(var(--button-lift)) scale(var(--button-hover-scale));
 }
 
 .diagnostic-dialog__cancel {
@@ -176,4 +178,5 @@
 .diagnostic-dialog__cancel:hover,
 .diagnostic-dialog__close:hover {
   background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
 }

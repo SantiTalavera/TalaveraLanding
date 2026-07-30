@@ -65,6 +65,10 @@
   /* At wide desktop this keeps roughly half of Kondor's outer air, without
      turning TALAVERA's layout into a narrow central column. */
   --page-gutter: clamp(2rem, 9vw, 10rem);
+  --button-lift: -4px;
+  --button-hover-scale: 1.02;
+  --button-glow-light: 0 0 2.25rem rgba(255, 255, 255, 0.24), 0 1rem 2.25rem rgba(0, 0, 0, 0.44);
+  --button-glow-dark: 0 1rem 2.25rem rgba(0, 0, 0, 0.28);
 }
 
 /* --- Reset & Base --- */

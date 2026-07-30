@@ -95,11 +95,13 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 700;
-  transition: background-color 300ms linear;
+  transition: background-color 200ms linear, box-shadow 200ms linear, transform 200ms linear;
 }
 
 .hero__btn-primary:hover {
-  background: var(--secondary);
+  background: var(--primary);
+  box-shadow: var(--button-glow-light);
+  transform: translateY(var(--button-lift)) scale(var(--button-hover-scale));
 }
 
 .hero__btn-primary:focus-visible,
