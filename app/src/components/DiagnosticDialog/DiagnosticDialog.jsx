@@ -5,8 +5,6 @@ const INITIAL_FORM = {
   name: '',
   email: '',
   organization: '',
-  role: '',
-  operation: '',
   context: '',
 }
 
@@ -42,6 +40,12 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
     setStatus('idle')
   }
 
+  const updateContext = (event) => {
+    updateField(event)
+    event.target.style.height = 'auto'
+    event.target.style.height = `${event.target.scrollHeight}px`
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault()
 
@@ -54,9 +58,7 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
     const body = [
       `Nombre: ${form.name}`,
       `Email: ${form.email}`,
-      `Organización: ${form.organization}`,
-      `Rol: ${form.role}`,
-      `Operación: ${form.operation}`,
+      `Organización: ${form.organization || 'No indicada'}`,
       '',
       'Contexto:',
       form.context,
@@ -79,7 +81,7 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
           <div>
             <p className="diagnostic-dialog__eyebrow">Diagnóstico estratégico</p>
             <h2 id="diagnostic-title" className="diagnostic-dialog__title">
-              Entender la operación antes de proponer una solución.
+              Empecemos por la operación.
             </h2>
           </div>
           <button
@@ -94,8 +96,8 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
         </div>
 
         <p className="diagnostic-dialog__intro">
-          Compartí el contexto mínimo. La conversación solo tiene sentido cuando
-          la operación ya exige estructura, trazabilidad y decisiones claras.
+          Contá brevemente qué hoy necesita orden. Te respondo por correo para
+          evaluar si tiene sentido avanzar.
         </p>
 
         <form className="diagnostic-dialog__form" onSubmit={handleSubmit}>
@@ -108,36 +110,29 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
               Email de trabajo
               <input name="email" type="email" autoComplete="email" required value={form.email} onChange={updateField} />
             </label>
-            <label>
-              Organización
-              <input name="organization" autoComplete="organization" required value={form.organization} onChange={updateField} />
-            </label>
-            <label>
-              Rol
-              <select name="role" required value={form.role} onChange={updateField}>
-                <option value="">Seleccionar</option>
-                <option value="Decisor">Decisor</option>
-                <option value="Operación">Operación</option>
-                <option value="Administración">Administración</option>
-                <option value="Otro">Otro</option>
-              </select>
-            </label>
           </div>
 
           <label>
-            Tipo de operación
-            <select name="operation" required value={form.operation} onChange={updateField}>
-              <option value="">Seleccionar</option>
-              <option value="HOA / Club de campo">HOA / Club de campo</option>
-              <option value="Desarrollo inmobiliario">Desarrollo inmobiliario</option>
-              <option value="Administración / operación">Administración / operación</option>
-              <option value="Otro actor de real estate">Otro actor de real estate</option>
-            </select>
+            Organización <span className="diagnostic-dialog__optional">(opcional)</span>
+            <input
+              name="organization"
+              autoComplete="organization"
+              placeholder="Nombre de la organización"
+              value={form.organization}
+              onChange={updateField}
+            />
           </label>
 
           <label>
             ¿Qué parte de la operación necesita orden?
-            <textarea name="context" rows="4" required value={form.context} onChange={updateField} />
+            <textarea
+              name="context"
+              rows="2"
+              required
+              placeholder="Objetivo, contexto o problema actual."
+              value={form.context}
+              onChange={updateContext}
+            />
           </label>
 
           {status === 'configuration' && (

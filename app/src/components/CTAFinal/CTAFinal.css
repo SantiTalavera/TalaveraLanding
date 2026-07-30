@@ -59,6 +59,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: var(--control-radius);
   background: #000000;
   color: #ffffff;
   padding: 1.5rem 3rem;

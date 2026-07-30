@@ -69,6 +69,7 @@
 
 /* CTA */
 .navbar__cta {
+  border-radius: var(--control-radius);
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;

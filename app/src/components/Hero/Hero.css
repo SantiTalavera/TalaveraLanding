@@ -93,6 +93,7 @@
 }
 
 .hero__btn-primary {
+  border-radius: var(--control-radius);
   background: var(--primary);
   color: var(--on-primary);
   padding: 1.25rem 2.5rem;
