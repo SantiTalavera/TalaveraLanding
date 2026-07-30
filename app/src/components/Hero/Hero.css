@@ -42,11 +42,11 @@
 }
 
 .hero__label {
-  font-size: 0.875rem;
-  letter-spacing: 0.4em;
+  font-size: 0.8125rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  font-weight: 300;
-  color: rgba(199, 198, 198, 0.6);
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .hero__title {
@@ -105,6 +105,12 @@
 
 .hero__btn-primary:hover {
   background: var(--secondary);
+}
+
+.hero__btn-primary:focus-visible,
+.hero__btn-tertiary:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
 }
 
 .hero__btn-tertiary {

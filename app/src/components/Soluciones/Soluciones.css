@@ -24,8 +24,8 @@
 }
 
 .soluciones__label {
-  font-size: 0.875rem;
-  letter-spacing: 0.4em;
+  font-size: 0.8125rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   font-weight: 700;
   color: #ffffff;
@@ -135,6 +135,11 @@
 
 .soluciones__card-cta:hover .soluciones__card-line {
   width: 4rem;
+}
+
+.soluciones__card-cta:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
 }
 
 .soluciones__card-soon {

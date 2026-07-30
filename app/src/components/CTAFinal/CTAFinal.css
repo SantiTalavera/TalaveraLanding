@@ -20,11 +20,12 @@
 }
 
 .cta-final__eyebrow {
-  font-size: 0.875rem;
-  letter-spacing: 0.4em;
+  font-size: 0.8125rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.4);
+  font-weight: 800;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.64);
   margin-bottom: 1rem;
 }
 
@@ -67,6 +68,12 @@
 
 .cta-final__btn-primary:hover {
   background: #3f3f46;
+}
+
+.cta-final__btn-primary:focus-visible,
+.cta-final__btn-secondary:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 4px;
 }
 
 .cta-final__btn-secondary {

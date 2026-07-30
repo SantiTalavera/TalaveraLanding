@@ -6,7 +6,6 @@ import Filtro from './components/Filtro/Filtro'
 import Proposito from './components/Proposito/Proposito'
 import Soluciones from './components/Soluciones/Soluciones'
 import Principios from './components/Principios/Principios'
-import Credibilidad from './components/Credibilidad/Credibilidad'
 import CTAFinal from './components/CTAFinal/CTAFinal'
 import Footer from './components/Footer/Footer'
 
@@ -22,7 +21,6 @@ export default function App() {
         <Proposito />
         <Soluciones />
         <Principios />
-        <Credibilidad />
         <CTAFinal />
       </main>
       <Footer />
