@@ -5,15 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 2rem;
+  padding: 0 var(--page-gutter);
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-@media (min-width: 768px) {
-  .hero {
-    padding: 0 6rem;
-  }
 }
 
 /* Background */

@@ -1,14 +1,8 @@
 .cta-final {
-  padding: 12rem 2rem;
+  padding: 12rem var(--page-gutter);
   background-color: #ffffff;
   color: #000000;
   text-align: center;
-}
-
-@media (min-width: 768px) {
-  .cta-final {
-    padding: 12rem 6rem;
-  }
 }
 
 .cta-final__container {

@@ -14,9 +14,13 @@ export default function Footer({ onDiagnosticClick }) {
         <div className="footer__brand">
           <img src={logoBlanco} alt="TALAVERA" className="footer__logo-img" />
           <p className="footer__descriptor">Real Estate Systems</p>
+          <p className="footer__statement">
+            Sistemas para operaciones complejas en real estate.
+          </p>
         </div>
 
-        <div className="footer__right">
+        <nav className="footer__navigation" aria-label="Navegación del pie de página">
+          <p className="footer__heading">Navegación</p>
           <div className="footer__links">
             {FOOTER_LINKS.map((link) => (
               <a key={link.label} className="footer__link" href={link.href}>
@@ -24,6 +28,13 @@ export default function Footer({ onDiagnosticClick }) {
               </a>
             ))}
           </div>
+        </nav>
+
+        <div className="footer__contact">
+          <p className="footer__heading">Contacto</p>
+          <p className="footer__contact-copy">
+            Si la operación ya necesita más estructura, conversemos.
+          </p>
           <button
             className="footer__cta"
             type="button"
@@ -31,10 +42,11 @@ export default function Footer({ onDiagnosticClick }) {
           >
             Diagnóstico estratégico
           </button>
-          <p className="footer__copyright">
-            © 2026 TALAVERA. Todos los derechos reservados.
-          </p>
         </div>
+      </div>
+      <div className="footer__bottom">
+        <p>© 2026 TALAVERA. Todos los derechos reservados.</p>
+        <p>Real Estate Systems</p>
       </div>
     </footer>
   )

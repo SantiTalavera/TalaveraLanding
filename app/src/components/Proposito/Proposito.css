@@ -6,8 +6,8 @@
 }
 
 .proposito__container {
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
 .proposito__eyebrow {

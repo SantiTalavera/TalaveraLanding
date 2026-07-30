@@ -1,5 +1,5 @@
 .tesis {
-  padding: 12rem 2rem;
+  padding: 12rem var(--page-gutter);
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -7,12 +7,6 @@
   gap: 2rem;
   justify-content: center;
   text-align: center;
-}
-
-@media (min-width: 768px) {
-  .tesis {
-    padding: 12rem 6rem;
-  }
 }
 
 .tesis__title {

@@ -62,6 +62,9 @@
   --spacing-48: 12rem;
 
   --control-radius: 4px;
+  /* At wide desktop this keeps roughly half of Kondor's outer air, without
+     turning TALAVERA's layout into a narrow central column. */
+  --page-gutter: clamp(2rem, 9vw, 10rem);
 }
 
 /* --- Reset & Base --- */
@@ -133,13 +136,6 @@ img {
 
 /* --- Responsive Container --- */
 .section-padding {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-@media (min-width: 768px) {
-  .section-padding {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
 }
