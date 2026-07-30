@@ -1,6 +1,6 @@
 import './CTAFinal.css'
 
-export default function CTAFinal() {
+export default function CTAFinal({ onDiagnosticClick }) {
   return (
     <section id="contacto" className="cta-final">
       <div className="cta-final__container">
@@ -16,10 +16,15 @@ export default function CTAFinal() {
         </h2>
 
         <div className="cta-final__actions">
-          <button id="cta-explore" className="cta-final__btn-primary">
+          <a id="cta-explore" className="cta-final__btn-primary" href="#soluciones">
             Explorar solución HOAs
-          </button>
-          <button id="cta-diagnostic" className="cta-final__btn-secondary">
+          </a>
+          <button
+            id="cta-diagnostic"
+            className="cta-final__btn-secondary"
+            type="button"
+            onClick={onDiagnosticClick}
+          >
             Solicitar diagnóstico
           </button>
         </div>

@@ -1,0 +1,171 @@
+.diagnostic-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.76);
+  backdrop-filter: blur(10px);
+}
+
+.diagnostic-dialog__panel {
+  width: min(100%, 48rem);
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  padding: 2rem;
+  background: var(--surface-container);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .diagnostic-dialog__panel {
+    padding: 3rem;
+  }
+}
+
+.diagnostic-dialog__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.diagnostic-dialog__eyebrow {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.diagnostic-dialog__title {
+  max-width: 34rem;
+  margin-top: 0.75rem;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.05;
+}
+
+.diagnostic-dialog__close {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 auto;
+  place-items: center;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.diagnostic-dialog__intro {
+  max-width: 40rem;
+  margin-top: 1.5rem;
+  color: var(--on-surface-variant);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.diagnostic-dialog__form {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.diagnostic-dialog__grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .diagnostic-dialog__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.diagnostic-dialog label {
+  display: grid;
+  gap: 0.625rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.diagnostic-dialog input,
+.diagnostic-dialog select,
+.diagnostic-dialog textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 0;
+  padding: 0.875rem 1rem;
+  background: var(--surface-container-lowest);
+  color: #ffffff;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.diagnostic-dialog textarea {
+  resize: vertical;
+}
+
+.diagnostic-dialog input:focus-visible,
+.diagnostic-dialog select:focus-visible,
+.diagnostic-dialog textarea:focus-visible,
+.diagnostic-dialog__close:focus-visible,
+.diagnostic-dialog__submit:focus-visible,
+.diagnostic-dialog__cancel:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.diagnostic-dialog__status {
+  color: #ffffff;
+  border-left: 2px solid #ffffff;
+  padding-left: 0.875rem;
+  font-size: 0.9375rem;
+}
+
+.diagnostic-dialog__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.diagnostic-dialog__submit,
+.diagnostic-dialog__cancel {
+  min-height: 3.25rem;
+  padding: 0.875rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: background-color 150ms linear, color 150ms linear;
+}
+
+.diagnostic-dialog__submit {
+  background: #ffffff;
+  color: #000000;
+}
+
+.diagnostic-dialog__submit:hover {
+  background: #d8d8d8;
+}
+
+.diagnostic-dialog__cancel {
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  color: #ffffff;
+}
+
+.diagnostic-dialog__cancel:hover,
+.diagnostic-dialog__close:hover {
+  background: rgba(255, 255, 255, 0.12);
+}

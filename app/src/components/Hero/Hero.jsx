@@ -36,21 +36,15 @@ export default function Hero() {
         </p>
 
         <div className="hero__actions">
-          <button id="hero-cta-primary" className="hero__btn-primary">
+          <a id="hero-cta-primary" className="hero__btn-primary" href="#soluciones">
             Ver soluciones
-          </button>
+          </a>
           <a id="hero-cta-secondary" className="hero__btn-tertiary" href="#metodo">
             Ver cómo funciona
           </a>
         </div>
       </div>
 
-      {/* Side Label */}
-      <div className="hero__side-label">
-        <p className="vertical-text hero__side-text">
-          Talavera Strategic Systems — MMXXIV
-        </p>
-      </div>
     </section>
   )
 }

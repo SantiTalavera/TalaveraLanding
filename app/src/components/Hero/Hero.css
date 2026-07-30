@@ -126,25 +126,3 @@
 .hero__btn-tertiary:hover {
   border-color: #ffffff;
 }
-
-/* Side Label */
-.hero__side-label {
-  position: absolute;
-  right: 3rem;
-  bottom: 6rem;
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .hero__side-label {
-    display: block;
-  }
-}
-
-.hero__side-text {
-  font-size: 10px;
-  letter-spacing: 1em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.2);
-  font-weight: 300;
-}

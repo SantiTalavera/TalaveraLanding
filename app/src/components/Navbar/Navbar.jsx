@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: 'Contacto', href: '#contacto' },
 ]
 
-export default function Navbar() {
+export default function Navbar({ onDiagnosticClick }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const closeMenu = () => setMenuOpen(false)
@@ -31,9 +31,14 @@ export default function Navbar() {
       </div>
 
       {/* Desktop CTA */}
-      <a id="nav-cta" className="navbar__cta navbar__cta--desktop" href="#contacto">
+      <button
+        id="nav-cta"
+        className="navbar__cta navbar__cta--desktop"
+        type="button"
+        onClick={onDiagnosticClick}
+      >
         Diagnóstico estratégico
-      </a>
+      </button>
 
       {/* Hamburger button (mobile) */}
       <button
@@ -60,13 +65,16 @@ export default function Navbar() {
             {link.label}
           </a>
         ))}
-        <a
+        <button
           className="navbar__cta navbar__cta--mobile"
-          href="#contacto"
-          onClick={closeMenu}
+          type="button"
+          onClick={() => {
+            closeMenu()
+            onDiagnosticClick()
+          }}
         >
           Diagnóstico estratégico
-        </a>
+        </button>
       </div>
     </nav>
   )
