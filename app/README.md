@@ -1,16 +1,13 @@
-# React + Vite
+# TALAVERA — prototipo privado
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación React + Vite. Ejecutar `npm install` y `npm run dev` desde este directorio. La versión actual es un prototipo privado: no publicarla en producción.
 
-Currently, two official plugins are available:
+## Modo demostración
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+`src/data/config.js` activa explícitamente `DEMO_MODE`. Los contenidos y enlaces ficticios están en `src/data/mock/content.js` y las imágenes provisionales en `src/assets/mock/`. Los destinos `#demo/...` abren vistas de demostración internas, sin páginas externas ni errores 404. Las organizaciones y productos de muestra no representan relaciones comerciales reales.
 
-## React Compiler
+El diagnóstico es una simulación sin backend: no envía ni almacena los datos ingresados, y limpia los campos al simular o cerrar. El espacio del hero está reservado para una futura escena, sin Three.js.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Para preparar el lanzamiento: cambiar `DEMO_MODE` a `false`, completar `src/data/production.js` con datos y destinos verificados, configurar el canal de diagnóstico y retirar `src/data/mock/`, `src/assets/mock/`, las vistas y el formulario demostrativos junto con sus importaciones. Revisar también que no se incluyan referencias ficticias en el build.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Comandos de validación: `npm run lint` y `npm run build`. No hay script de typecheck ni suite de pruebas configurados.
