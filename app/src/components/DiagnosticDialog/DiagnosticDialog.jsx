@@ -14,12 +14,22 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
   const [form, setForm] = useState(INITIAL_FORM)
   const [status, setStatus] = useState('idle')
   const closeButtonRef = useRef(null)
+  const panelRef = useRef(null)
 
   useEffect(() => {
     if (!isOpen) return undefined
 
+    const previousFocus = document.activeElement
+    const previousOverflow = document.body.style.overflow
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') onClose()
+      if (event.key !== 'Tab') return
+      const focusable = panelRef.current?.querySelectorAll('button, input, textarea, select, a[href]')
+      if (!focusable?.length) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus() }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus() }
     }
 
     document.addEventListener('keydown', handleKeyDown)
@@ -28,7 +38,8 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
-      document.body.style.overflow = ''
+      document.body.style.overflow = previousOverflow
+      if (previousFocus?.isConnected) previousFocus.focus()
     }
   }, [isOpen, onClose])
 
@@ -65,12 +76,13 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
     ].join('\n')
 
     window.location.href = `mailto:${DIAGNOSTIC_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    setStatus('sent')
+    setStatus('prepared')
   }
 
   return (
     <div className="diagnostic-dialog" role="presentation" onMouseDown={onClose}>
       <section
+        ref={panelRef}
         className="diagnostic-dialog__panel"
         role="dialog"
         aria-modal="true"
@@ -137,12 +149,12 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
 
           {status === 'configuration' && (
             <p className="diagnostic-dialog__status" role="status">
-              Falta configurar el correo receptor del diagnóstico antes de publicar.
+              El canal de diagnóstico no está disponible en este momento.
             </p>
           )}
-          {status === 'sent' && (
+          {status === 'prepared' && (
             <p className="diagnostic-dialog__status" role="status">
-              Se abrió tu cliente de correo con la solicitud completa.
+              Si tenés un cliente de correo configurado, podés revisar y enviar la solicitud desde allí.
             </p>
           )}
 
