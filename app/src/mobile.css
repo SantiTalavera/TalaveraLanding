@@ -1,0 +1,96 @@
+@media (max-width: 750px) {
+  :root {
+    --page-gutter: clamp(1.25rem, 5vw, 2rem);
+  }
+
+  .navbar {
+    --header-control-height: 2.25rem;
+    gap: 1rem;
+    padding-top: .9rem;
+    padding-bottom: .9rem;
+  }
+
+  .navbar__toggle {
+    min-width: 3rem;
+    min-height: 2.75rem;
+    padding: .5rem;
+    text-align: right;
+  }
+
+  .navbar__mobile {
+    max-height: calc(100dvh - 4.05rem);
+    overflow-y: auto;
+    gap: 1.25rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    box-shadow: 0 1rem 1.5rem rgba(38, 63, 81, .08);
+  }
+
+  .navbar__mobile a,
+  .navbar__mobile span {
+    line-height: 1.4;
+  }
+
+  .hero {
+    min-height: calc(100svh - 4.05rem);
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero__visual { height: clamp(5rem, 22vw, 7rem); }
+  .hero h1 { font-size: clamp(2rem, 8vw, 3rem); line-height: 1.08; }
+  .hero p { margin: 1.5rem auto; font-size: 1rem; line-height: 1.65; }
+
+  .button { max-width: 100%; min-height: 3rem; text-align: center; }
+
+  .clients { padding-top: 3rem; padding-bottom: 3rem; }
+  .clients__viewport { margin-top: 1.5rem; }
+  .clients__group { gap: 2.5rem; padding-right: 2.5rem; }
+  .clients__group a { width: 7.5rem; height: 3.5rem; }
+  .clients__group img { max-height: 2.5rem; }
+
+  .products, .faq { padding-top: 4rem; padding-bottom: 4rem; }
+  .products__top { align-items: flex-start; }
+  .products__top > div { min-width: 0; }
+  .products__top h2 { font-size: clamp(1.75rem, 7vw, 2.4rem); }
+  .products__slide { gap: 2rem; padding-top: 2.5rem; }
+  .products__copy h3 { font-size: clamp(1.9rem, 7.5vw, 2.6rem); overflow-wrap: anywhere; }
+  .products__description { font-size: 1rem; }
+  .products__link { margin-top: 1.75rem; }
+  .products__controls { gap: 1rem; margin-top: 2rem; }
+  .products__controls > button { min-width: 2.75rem; min-height: 2.75rem; }
+  .products__controls > div { gap: 1.1rem; }
+  .products__dot { position: relative; }
+  .products__dot::after { content: ''; position: absolute; inset: -.55rem; }
+
+  .faq { gap: 2rem; }
+  .faq h2 { margin: 1.25rem 0; font-size: clamp(2rem, 8vw, 2.6rem); }
+  .faq summary { padding: 1.25rem 0; }
+  .faq details p { padding-right: 0; }
+
+  .cta-final { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+  .cta-final h2 { margin: 1.5rem 0; font-size: clamp(2rem, 8vw, 2.8rem); line-height: 1.1; }
+  .cta-final p:not(.section-label) { font-size: 1rem; margin-bottom: 2rem; }
+
+  .footer { padding-top: 4rem; }
+  .footer__layout { gap: 2.5rem; }
+  .footer__columns { gap: 2rem 1.25rem; }
+  .footer__columns h2 { margin-bottom: 1rem; }
+  .footer__social { flex-wrap: wrap; }
+  .footer__bottom { margin-top: 4rem; }
+
+  .diagnostic-dialog { padding: .75rem; }
+  .diagnostic-dialog__panel { max-height: calc(100dvh - 1.5rem); padding: 1.25rem; overscroll-behavior: contain; }
+  .diagnostic-dialog__header { gap: 1rem; }
+  .diagnostic-dialog__title { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .diagnostic-dialog__actions > button { flex: 1 1 100%; }
+
+  .demo-page { padding-top: 5rem; padding-bottom: 5rem; }
+  .demo-page h1 { font-size: clamp(2.2rem, 9vw, 3.5rem); overflow-wrap: anywhere; }
+}
+
+@media (max-width: 360px) {
+  .navbar__logo img { height: 1.9rem; }
+  .products__top { flex-wrap: wrap; }
+  .footer__columns { gap: 1.5rem 1rem; }
+}

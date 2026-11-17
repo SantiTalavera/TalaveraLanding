@@ -3,4 +3,4 @@ import * as demo from './mock/content'
 import * as production from './production'
 
 const content = DEMO_MODE ? demo : production
-export const { clients, products, faqs, navigation, footerLinks, socialLinks } = content
+export const { clients, products, portfolio, faqs, navigation, footerLinks, socialLinks } = content

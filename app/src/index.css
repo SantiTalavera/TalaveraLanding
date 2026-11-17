@@ -5,18 +5,30 @@
 
 /* --- CSS Custom Properties (Design Tokens) --- */
 :root {
+  /* Identidad cromática semántica */
+  --background-primary: #FAFAF9;
+  --background-secondary: #EBEFF1;
+  --surface-muted: #D5DEE3;
+  --accent-primary: #718A9B;
+  --accent-strong: #344F63;
+  --accent-hover: #263f51;
+  --text-primary: #101316;
+  --text-secondary: #526371;
+  --text-on-dark: #FAFAF9;
+  --border-subtle: #D5DEE3;
+
   /* Surface Hierarchy */
-  --surface-container-lowest: #151515;
-  --surface-container-low: #202020;
-  --surface: #1a1a1a;
-  --surface-container: #242424;
-  --surface-container-high: #303030;
-  --surface-container-highest: #3a3a3a;
-  --surface-bright: #424242;
+  --surface-container-lowest: var(--background-primary);
+  --surface-container-low: var(--background-secondary);
+  --surface: var(--background-primary);
+  --surface-container: var(--background-secondary);
+  --surface-container-high: var(--surface-muted);
+  --surface-container-highest: #dededb;
+  --surface-bright: #ffffff;
 
   /* Primary & Secondary */
-  --primary: #ffffff;
-  --on-primary: #1a1c1c;
+  --primary: #111111;
+  --on-primary: #ffffff;
   --primary-container: #d4d4d4;
   --secondary: #c7c6c6;
   --on-secondary: #1a1c1c;
@@ -27,8 +39,8 @@
   --on-tertiary: #1b1c1c;
 
   /* On-surface */
-  --on-surface: #e5e2e1;
-  --on-surface-variant: #c6c6c6;
+  --on-surface: var(--text-primary);
+  --on-surface-variant: var(--text-secondary);
 
   /* Outline */
   --outline: #919191;
@@ -146,11 +158,11 @@ img {
 
 /* Shared editorial controls */
 :root { --control-radius: 0px; }
-.button { display:inline-flex; align-items:center; justify-content:center; background:#fff; color:#111; padding:1.1rem 1.8rem; border-radius:0; font-size:.75rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; transition:background-color 150ms linear; }
-.button:hover { background:#d4d4d4; }
-.button:active { background:#aaa; }
-.section-label { color:#aaa; font-size:.7rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
-a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, textarea:focus-visible { outline:2px solid #fff; outline-offset:4px; }
+.button { display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, rgba(80,113,134,.92), rgba(38,63,81,.92)); color:var(--text-on-dark); padding:1.1rem 1.8rem; border:1px solid rgba(255,255,255,.4); border-radius:999px; box-shadow:inset 0 1px 1px rgba(255,255,255,.45), inset 0 -1px 1px rgba(38,63,81,.3), 0 8px 24px rgba(52,79,99,.24); backdrop-filter:blur(18px) saturate(160%); -webkit-backdrop-filter:blur(18px) saturate(160%); font-size:.75rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; transition:background 200ms ease, box-shadow 200ms ease, transform 200ms ease; }
+.button:hover { background:linear-gradient(135deg, rgba(95,130,151,.94), rgba(52,79,99,.94)); box-shadow:inset 0 1px 1px rgba(255,255,255,.55), inset 0 -1px 1px rgba(38,63,81,.3), 0 12px 28px rgba(52,79,99,.3); transform:translateY(-2px); }
+.button:active { transform:translateY(0); }
+.section-label { color:#626262; font-size:.7rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, textarea:focus-visible { outline:2px solid var(--accent-strong); outline-offset:4px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *, *::before, *::after { transition-duration:0.01ms !important; animation-duration:0.01ms !important; animation-iteration-count:1 !important; } }
 
 .demo-badge { position:fixed; right:1rem; bottom:1rem; z-index:45; padding:.4rem .65rem; background:#111; border:1px solid #555; color:#bbb; font-size:.6rem; letter-spacing:.1em; text-transform:uppercase; pointer-events:none; }

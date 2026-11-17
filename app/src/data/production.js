@@ -12,6 +12,9 @@ export const products = [
   },
 ]
 
+// Incorporar solo iniciativas autorizadas y verificadas.
+export const portfolio = []
+
 export const faqs = [
   ['¿Con qué tipo de organizaciones trabaja TALAVERA?', 'TALAVERA trabaja con organizaciones del sector inmobiliario que necesitan más estructura y claridad en operaciones complejas.'],
   ['¿Desarrollás productos propios o soluciones a medida?', 'El enfoque contempla productos propios y proyectos específicos, según las necesidades y el contexto de cada operación.'],

@@ -1,4 +1,4 @@
-import { clients, products } from '../../data/content'
+import { clients, products, portfolio } from '../../data/content'
 import './DemoPage.css'
 
 const titles = {
@@ -10,8 +10,8 @@ const titles = {
 export default function DemoPage({ path }) {
   const parts = path.replace(/^#demo\/?/, '').split('/').filter(Boolean)
   const last = parts.at(-1)
-  const product = products.find((item) => item.id === last)
+  const product = [...portfolio, ...products].find((item) => item.slug === last || item.id === last)
   const client = clients.find((item) => item.id === last)
   const title = product?.name || client?.name || titles[last] || 'Vista de demostración'
-  return <main className="demo-page"><div className="demo-page__inner"><p className="section-label">TALAVERA / Modo demostración</p><h1>{title}</h1><p>{product?.description || 'Esta vista representa un destino provisional del prototipo. Su contenido y su dirección se definirán antes del lanzamiento.'}</p>{product?.image && <img src={product.image} alt="Representación visual demostrativa del producto" />}<a className="demo-page__back" href="#inicio">← Volver a la página principal</a></div></main>
+  return <main className="demo-page"><div className="demo-page__inner"><p className="section-label">TALAVERA / Modo demostración</p><h1>{title}</h1><p>{product?.description || 'Esta vista representa un destino provisional del prototipo. Su contenido y su dirección se definirán antes del lanzamiento.'}</p>{product?.image && <img src={product.image} alt={product.imageAlt || "Representación visual demostrativa del producto"} />}<a className="demo-page__back" href="#inicio">← Volver a la página principal</a></div></main>
 }
