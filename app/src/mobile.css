@@ -43,8 +43,8 @@
 
   .button { max-width: 100%; min-height: 3rem; text-align: center; }
 
-  .clients { padding-top: 3rem; padding-bottom: 3rem; }
-  .clients__viewport { margin-top: 1.5rem; }
+  .clients { padding-top: 0; padding-bottom: 0; }
+  .clients__viewport { margin-top: 0; }
   .clients__group { gap: 2.5rem; padding-right: 2.5rem; }
   .clients__group a { width: 7.5rem; height: 3.5rem; }
   .clients__group img { max-height: 2.5rem; }
