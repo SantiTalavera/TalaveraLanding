@@ -6,8 +6,8 @@
   .navbar {
     --header-control-height: 2.25rem;
     gap: 1rem;
-    padding-top: .9rem;
-    padding-bottom: .9rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
   }
 
   .navbar__toggle {
@@ -18,7 +18,7 @@
   }
 
   .navbar__mobile {
-    max-height: calc(100dvh - 4.05rem);
+    max-height: calc(100dvh - 3.55rem);
     overflow-y: auto;
     gap: 1.25rem;
     padding-top: 1.5rem;
@@ -32,7 +32,7 @@
   }
 
   .hero {
-    min-height: calc(100svh - 4.05rem);
+    min-height: calc(100svh - 3.55rem);
     padding-top: 2rem;
     padding-bottom: 5rem;
   }
@@ -43,11 +43,7 @@
 
   .button { max-width: 100%; min-height: 3rem; text-align: center; }
 
-  .clients { padding-top: 0; padding-bottom: 0; }
-  .clients__viewport { margin-top: 0; }
-  .clients__group { gap: 2.5rem; padding-right: 2.5rem; }
-  .clients__group a { width: 7.5rem; height: 3.5rem; }
-  .clients__group img { max-height: 2.5rem; }
+  .clients { padding-top: 4rem; padding-bottom: 4rem; }
 
   .products, .faq { padding-top: 4rem; padding-bottom: 4rem; }
   .products__top { align-items: flex-start; }
@@ -64,7 +60,7 @@
   .products__dot::after { content: ''; position: absolute; inset: -.55rem; }
 
   .faq { gap: 2rem; }
-  .faq h2 { margin: 1.25rem 0; font-size: clamp(2rem, 8vw, 2.6rem); }
+  .faq h2 { margin: 0 0 1.25rem; font-size: clamp(2rem, 8vw, 2.6rem); }
   .faq summary { padding: 1.25rem 0; }
   .faq details p { padding-right: 0; }
 

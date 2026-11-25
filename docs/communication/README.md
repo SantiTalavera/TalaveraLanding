@@ -1,6 +1,6 @@
 # TALAVERA — trabajo editorial
 
-Documentos de revisión de la Fase 3. Ninguna propuesta nueva está aprobada ni habilita publicación o implementación. El header y la arquitectura registradas en `01-header-approved.md` son decisiones existentes, no una nueva aprobación.
+Estos documentos son propuestas de revisión anteriores. Las secciones 8 y 9 de la tesis en Notion contienen el copy y la auditoría aprobados y prevalecen ante cualquier contradicción. La implementación privada está en curso; la aprobación editorial no autoriza la publicación.
 
 Orden de lectura: [contexto](00-context.md), [header](01-header-approved.md), [propuesta consolidada](11-consolidated-proposal.md), [auditoría](10-editorial-audit.md) y [matriz de decisiones](12-decisions-pending.md). Los archivos 02–09 contienen el razonamiento y detalle por sección.
 

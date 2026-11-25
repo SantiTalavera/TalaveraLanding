@@ -4,8 +4,8 @@ import './Hero.css'
 export default function Hero({ onDiagnosticClick }) {
   return <section id="inicio" className="hero">
     <HeroVisual />
-    <h1>Sistemas para operaciones complejas en real estate.</h1>
-    <p>Diseño e implemento sistemas que aportan estructura, control y trazabilidad a operaciones inmobiliarias de alto valor.</p>
-    <button className="button" onClick={onDiagnosticClick}>Diagnóstico estratégico</button>
+    <h1>Ingeniería de sistemas para el negocio inmobiliario.</h1>
+    <p>Mejores decisiones, operaciones mejor estructuradas y nuevas capacidades para el desarrollo de negocios inmobiliarios.</p>
+    <button className="button" onClick={onDiagnosticClick}>Iniciar conversación</button>
   </section>
 }

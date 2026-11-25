@@ -1,0 +1,9 @@
+.capabilities { padding: 6rem var(--page-gutter); background: var(--background-primary); color: var(--text-primary); }
+.capabilities__content { width: min(100%, 80rem); margin: auto; }
+.capabilities h2 { font-size: clamp(2.25rem, 5vw, 4.8rem); line-height: 1.05; letter-spacing: -.045em; }
+.capabilities__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 3rem); margin-top: 3rem; }
+.capabilities article { border-top: 1px solid var(--border-subtle); padding-top: 1.5rem; }
+.capabilities h3 { font-size: clamp(1.25rem, 1.8vw, 1.7rem); line-height: 1.2; }
+.capabilities p { margin-top: 1rem; color: var(--text-secondary); line-height: 1.6; }
+.capabilities__link { display: inline-block; margin-top: 2.5rem; color: var(--text-primary); }
+@media (max-width: 750px) { .capabilities { padding: 4rem var(--page-gutter); } .capabilities__grid { grid-template-columns: 1fr; gap: 1.5rem; } }

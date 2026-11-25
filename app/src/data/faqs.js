@@ -1,0 +1,8 @@
+export const faqs = [
+  ['¿A qué tipo de organizaciones se orienta TALAVERA?', 'A desarrolladores inmobiliarios, urbanizaciones privadas, administradores de propiedades, propietarios de activos e inmobiliarias que buscan mejorar sus operaciones o desarrollar nuevas capacidades.'],
+  ['¿Es necesario tener una solución definida antes de contactar?', 'No. Una necesidad empresarial o una oportunidad de negocio puede ser suficiente para iniciar una conversación. Comprender el contexto permite determinar qué tipo de intervención resulta apropiada.'],
+  ['¿TALAVERA desarrolla productos propios y sistemas a medida?', 'Sí. TALAVERA contempla el desarrollo de productos especializados y el diseño de sistemas adaptados a necesidades particulares. Cada iniciativa tiene su propio alcance y estado de desarrollo.'],
+  ['¿Es posible trabajar con los sistemas que ya utiliza mi organización?', 'Los sistemas existentes pueden formar parte de la solución. Su integración o evolución se evalúa según las características técnicas y las necesidades operativas de cada organización.'],
+  ['¿Cómo comienza una relación comercial con TALAVERA?', 'El primer paso es una conversación para comprender el contexto, los objetivos y el alcance de la iniciativa. Según el caso, puede dar lugar a una instancia de análisis, diagnóstico o propuesta comercial.'],
+  ['¿Es posible proponer una colaboración estratégica?', 'Sí. TALAVERA está abierta a evaluar iniciativas y oportunidades empresariales dentro del sector inmobiliario en las que la ingeniería de sistemas y la complementariedad entre las partes puedan aportar valor.'],
+]

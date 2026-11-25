@@ -65,7 +65,7 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
       return
     }
 
-    const subject = `Diagnóstico estratégico - ${form.organization}`
+    const subject = `Consulta TALAVERA - ${form.organization}`
     const body = [
       `Nombre: ${form.name}`,
       `Email: ${form.email}`,
@@ -91,9 +91,9 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
       >
         <div className="diagnostic-dialog__header">
           <div>
-            <p className="diagnostic-dialog__eyebrow">Diagnóstico estratégico</p>
+            <p className="diagnostic-dialog__eyebrow">Contacto</p>
             <h2 id="diagnostic-title" className="diagnostic-dialog__title">
-              Empecemos por la operación.
+              Iniciar conversación
             </h2>
           </div>
           <button
@@ -101,15 +101,14 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
             className="diagnostic-dialog__close"
             type="button"
             onClick={onClose}
-            aria-label="Cerrar diagnóstico"
+            aria-label="Cerrar formulario"
           >
             ×
           </button>
         </div>
 
         <p className="diagnostic-dialog__intro">
-          Contá brevemente qué hoy necesita orden. Te respondo por correo para
-          evaluar si tiene sentido avanzar.
+          Contá qué necesitás resolver, qué producto o proyecto te interesa o qué oportunidad querés explorar.
         </p>
 
         <form className="diagnostic-dialog__form" onSubmit={handleSubmit}>
@@ -119,7 +118,7 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
               <input name="name" autoComplete="name" required value={form.name} onChange={updateField} />
             </label>
             <label>
-              Email de trabajo
+              Correo electrónico
               <input name="email" type="email" autoComplete="email" required value={form.email} onChange={updateField} />
             </label>
           </div>
@@ -136,12 +135,12 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
           </label>
 
           <label>
-            ¿Qué parte de la operación necesita orden?
+            Contexto de la consulta
             <textarea
               name="context"
               rows="2"
               required
-              placeholder="Objetivo, contexto o problema actual."
+              placeholder="Describí brevemente tu situación, objetivo o iniciativa."
               value={form.context}
               onChange={updateContext}
             />
@@ -149,7 +148,7 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
 
           {status === 'configuration' && (
             <p className="diagnostic-dialog__status" role="status">
-              El canal de diagnóstico no está disponible en este momento.
+              El canal de contacto no está disponible en este momento.
             </p>
           )}
           {status === 'prepared' && (
@@ -160,7 +159,7 @@ export default function DiagnosticDialog({ isOpen, onClose }) {
 
           <div className="diagnostic-dialog__actions">
             <button className="diagnostic-dialog__submit" type="submit">
-              Enviar solicitud
+              Preparar consulta
             </button>
             <button className="diagnostic-dialog__cancel" type="button" onClick={onClose}>
               Cancelar

@@ -6,29 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>try{localStorage.removeItem('talavera-theme')}catch{}document.documentElement.dataset.theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'</script>
     <meta name="description" content="TALAVERA — Diseño e implementación de sistemas para ordenar operaciones complejas en real estate. Trazabilidad, control y claridad." />
-    <title>TALAVERA | Sistemas para Real Estate</title>
+    <title>TALAVERA | Ingeniería de sistemas para el negocio inmobiliario</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
-      .page-loader{--loader-bg:255,255,255;--loader-invert:0;position:fixed;inset:0;z-index:9999;display:flex;overflow:hidden}
-      [data-theme='dark'] .page-loader{--loader-bg:17,26,32;--loader-invert:1}
+      .page-loader{--loader-bg:9,10,11;--loader-foreground:#f6f6f4;--loader-glow:246,246,244;--loader-invert:1;position:fixed;inset:0;z-index:9999;display:flex;overflow:hidden}
+      [data-theme='dark'] .page-loader{--loader-bg:255,255,255;--loader-foreground:#151617;--loader-glow:21,22,23;--loader-invert:0}
       .page-loader::before{content:'';position:absolute;inset:0;background:rgb(var(--loader-bg))}
       .page-loader__panel{position:absolute;inset:0}
       .page-loader__panel img{position:absolute;top:50%;left:50%;width:min(65.28vw,54.4rem);max-width:none;height:auto;filter:brightness(0) invert(var(--loader-invert));transform:translate(-50%,-50%);animation:loader-logo-enter .20s ease-out both}
-      .page-loader__welcome{position:absolute;top:calc(50% + min(3.196vw, 2.652rem));left:calc(50% + min(1.8275vw, 1.5215rem));color:#101316;font-family:Manrope,sans-serif;font-size:min(4.08vw, 3.4rem);font-weight:200;line-height:1;letter-spacing:min(.9vw, .75rem);white-space:nowrap;animation:loader-welcome-enter .20s ease-out both}
-      [data-theme='dark'] .page-loader__welcome{color:#f2f6f7}
+      .page-loader__welcome{position:absolute;top:calc(50% + min(3.196vw, 2.652rem));left:calc(50% + min(1.8275vw, 1.5215rem));color:var(--loader-foreground);font-family:Manrope,sans-serif;font-size:min(4.08vw, 3.4rem);font-weight:200;line-height:1;letter-spacing:min(.9vw, .75rem);white-space:nowrap;animation:loader-welcome-enter .20s ease-out both}
       @keyframes loader-welcome-enter{
-        0%{opacity:0;filter:drop-shadow(0 0 10px #344f63) drop-shadow(0 0 22px #718a9b) blur(18px);transform:scaleX(1.08)}
-        35%{opacity:.55;filter:drop-shadow(0 0 8px #344f63) drop-shadow(0 0 18px #718a9b) blur(10px)}
-        70%{opacity:.9;filter:drop-shadow(0 0 5px #344f63) drop-shadow(0 0 10px #718a9b) blur(3px)}
-        100%{opacity:1;filter:drop-shadow(0 0 0 transparent) drop-shadow(0 0 0 transparent) blur(0);transform:scaleX(1)}
+        0%{opacity:0;filter:drop-shadow(0 0 10px rgba(var(--loader-glow),.25)) blur(18px);transform:scaleX(1.08)}
+        35%{opacity:.55;filter:drop-shadow(0 0 8px rgba(var(--loader-glow),.2)) blur(10px)}
+        70%{opacity:.9;filter:drop-shadow(0 0 5px rgba(var(--loader-glow),.12)) blur(3px)}
+        100%{opacity:1;filter:drop-shadow(0 0 0 transparent) blur(0);transform:scaleX(1)}
       }
       @keyframes loader-logo-enter{
-        0%{opacity:0;filter:brightness(0) invert(var(--loader-invert)) drop-shadow(0 0 10px #344f63) drop-shadow(0 0 22px #718a9b) blur(18px);transform:translate(-50%,-50%) scaleX(1.08)}
-        35%{opacity:.55;filter:brightness(0) invert(var(--loader-invert)) drop-shadow(0 0 8px #344f63) drop-shadow(0 0 18px #718a9b) blur(10px)}
-        70%{opacity:.9;filter:brightness(0) invert(var(--loader-invert)) drop-shadow(0 0 5px #344f63) drop-shadow(0 0 10px #718a9b) blur(3px)}
-        100%{opacity:1;filter:brightness(0) invert(var(--loader-invert)) drop-shadow(0 0 0 transparent) drop-shadow(0 0 0 transparent) blur(0);transform:translate(-50%,-50%) scaleX(1)}
+        0%{opacity:0;filter:brightness(0) invert(var(--loader-invert)) drop-shadow(0 0 10px rgba(var(--loader-glow),.25)) blur(18px);transform:translate(-50%,-50%) scaleX(1.08)}
+        35%{opacity:.55;filter:brightness(0) invert(var(--loader-invert)) drop-shadow(0 0 8px rgba(var(--loader-glow),.2)) blur(10px)}
+        70%{opacity:.9;filter:brightness(0) invert(var(--loader-invert)) drop-shadow(0 0 5px rgba(var(--loader-glow),.12)) blur(3px)}
+        100%{opacity:1;filter:brightness(0) invert(var(--loader-invert)) drop-shadow(0 0 0 transparent) blur(0);transform:translate(-50%,-50%) scaleX(1)}
       }
       .page-loader.is-opening{pointer-events:none}
       .page-loader.is-opening::before{animation:loader-background 1.5s ease-in-out both}
@@ -59,8 +58,8 @@
         .page-loader.is-opening .page-loader__panel:first-child,.page-loader.is-opening .page-loader__panel:last-child{animation:loader-mobile-exit .20s ease-in both}
         @keyframes loader-mobile-exit{
           0%{opacity:1;filter:blur(0) drop-shadow(0 0 0 transparent)}
-          55%{opacity:.7;filter:blur(4px) drop-shadow(0 0 8px #718a9b)}
-          100%{opacity:0;filter:blur(18px) drop-shadow(0 0 18px #718a9b)}
+          55%{opacity:.7;filter:blur(4px) drop-shadow(0 0 8px rgba(var(--loader-glow),.2))}
+          100%{opacity:0;filter:blur(18px) drop-shadow(0 0 18px rgba(var(--loader-glow),.12))}
         }
       }
       @media(prefers-reduced-motion:reduce){.page-loader__panel img,.page-loader__welcome,.page-loader.is-opening::before,.page-loader.is-opening .page-loader__panel{animation:none}}

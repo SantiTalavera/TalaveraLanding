@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { footerLinks, navigation, products } from '../../data/content'
+import { portfolio } from '../../data/content'
+import { DEMO_MODE } from '../../data/config'
 import logoBlanco from '../../assets/logoBlanco.svg'
 import './Navbar.css'
 
@@ -8,18 +9,12 @@ export default function Navbar({ onDiagnosticClick }) {
   const [openCategory, setOpenCategory] = useState(null)
   const [darkMode, setDarkMode] = useState(() => document.documentElement.dataset.theme === 'dark')
   const headerRef = useRef(null)
-  const categories = navigation.map((item) => {
-    if (item.label === 'Productos') {
-      return { ...item, entries: products.filter((product) => product.status === 'active').map((product) => ({ label: product.name, href: product.landingUrl })) }
-    }
-    if (item.label === 'Soluciones') {
-      return { ...item, entries: [...(item.href ? [{ label: 'Explorar soluciones', href: item.href }] : []), { label: 'Conversar sobre una solución', action: 'diagnostic' }] }
-    }
-    if (item.label === 'Recursos') {
-      return { ...item, entries: [...footerLinks.Recursos, { label: 'Preguntas frecuentes', href: '#preguntas-frecuentes' }] }
-    }
-    return { ...item, entries: [...footerLinks.Soporte, { label: 'Preguntas frecuentes', href: '#preguntas-frecuentes' }, { label: 'Contacto', action: 'diagnostic' }] }
-  })
+  const hasPortfolio = portfolio.some((item) => item.visibility === 'public' || (DEMO_MODE && item.visibility === 'demo'))
+  const categories = [
+    { label: 'Capacidades', entries: [{ label: 'Optimización operativa', href: '#optimizacion-operativa' }, { label: 'Ingeniería y tecnología', href: '#ingenieria-tecnologia' }, { label: 'Desarrollo estratégico', href: '#desarrollo-estrategico' }] },
+    ...(hasPortfolio ? [{ label: 'Portfolio', entries: [{ label: 'Explorar portfolio', href: '#productos' }] }] : []),
+    { label: 'Firma', entries: [{ label: 'Preguntas frecuentes', href: '#preguntas-frecuentes' }, { label: 'Contacto', action: 'diagnostic' }] },
+  ]
 
   useEffect(() => {
     document.documentElement.dataset.theme = darkMode ? 'dark' : 'light'
@@ -71,11 +66,11 @@ export default function Navbar({ onDiagnosticClick }) {
     <header className="navbar" ref={headerRef} onMouseLeave={() => setOpenCategory((current) => current?.startsWith('desktop-') ? null : current)}>
       <a className="navbar__logo" href="#inicio" aria-label="TALAVERA, inicio" onClick={closeMenus}><img src={logoBlanco} alt="TALAVERA" /></a>
       <nav className="navbar__links" aria-label="Navegación principal">{renderCategories('desktop')}</nav>
-      <div className="navbar__actions">{themeToggle}<button className="button button--header" onClick={openDiagnostic}>Diagnóstico estratégico</button></div>
+      <div className="navbar__actions">{themeToggle}<button className="button button--header" onClick={openDiagnostic}>Iniciar conversación</button></div>
       <button className="navbar__toggle" type="button" aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={menuOpen} aria-controls="mobile-menu" onClick={() => { setMenuOpen(!menuOpen); setOpenCategory(null) }}>{menuOpen ? 'Cerrar' : 'Menú'}</button>
       {menuOpen && <nav id="mobile-menu" className="navbar__mobile" aria-label="Navegación móvil">
         {renderCategories('mobile')}
-        <div className="navbar__mobile-actions">{themeToggle}<button className="button" onClick={openDiagnostic}>Diagnóstico estratégico</button></div>
+        <div className="navbar__mobile-actions">{themeToggle}<button className="button" onClick={openDiagnostic}>Iniciar conversación</button></div>
       </nav>}
     </header>
   )

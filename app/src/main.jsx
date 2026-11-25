@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import './mobile.css'
 import './theme.css'
+import './story-motion.css'
 
 const loader = document.getElementById('page-loader')
 const root = document.getElementById('root')
