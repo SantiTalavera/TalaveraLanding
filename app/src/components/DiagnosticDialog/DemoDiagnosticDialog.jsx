@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
+import { visiblePortfolio } from '../../data/content'
 import './DiagnosticDialog.css'
 
-export default function DemoDiagnosticDialog({ onClose }) {
+export default function DemoDiagnosticDialog({ onClose, contact, available }) {
   const panel = useRef(null)
   const closeButton = useRef(null)
   const [complete, setComplete] = useState(false)
+  const [reason, setReason] = useState(contact.reason)
+  const [initiativeId, setInitiativeId] = useState(contact.initiativeId)
   useEffect(() => {
     const previousFocus = document.activeElement
     const previousOverflow = document.body.style.overflow
@@ -23,15 +26,18 @@ export default function DemoDiagnosticDialog({ onClose }) {
   }, [onClose])
   const submit = (event) => { event.preventDefault(); event.currentTarget.reset(); setComplete(true) }
   return <div className="diagnostic-dialog" role="presentation" onMouseDown={onClose}><section ref={panel} className="diagnostic-dialog__panel" role="dialog" aria-modal="true" aria-labelledby="diagnostic-title" onMouseDown={(event) => event.stopPropagation()}>
-    <div className="diagnostic-dialog__header"><div><p className="diagnostic-dialog__eyebrow">Diagnóstico estratégico / Demostración</p><h2 id="diagnostic-title" className="diagnostic-dialog__title">Empecemos por la operación.</h2></div><button ref={closeButton} className="diagnostic-dialog__close" type="button" onClick={onClose} aria-label="Cerrar diagnóstico">×</button></div>
-    <p className="diagnostic-dialog__intro">Este formulario es una simulación: los datos no se envían ni se guardan.</p>
+    <div className="diagnostic-dialog__header"><div><p className="diagnostic-dialog__eyebrow">{available ? 'Demostración' : 'Contacto'}</p><h2 id="diagnostic-title" className="diagnostic-dialog__title">Iniciar conversación</h2></div><button ref={closeButton} className="diagnostic-dialog__close" type="button" onClick={onClose} aria-label="Cerrar formulario">×</button></div>
+    <p className="diagnostic-dialog__intro">Contá qué necesitás resolver, qué producto o proyecto te interesa o qué oportunidad querés explorar.</p>
+    {available ? <><p className="diagnostic-dialog__intro">Este formulario es una simulación: los datos no se envían ni se guardan.</p>
     <form className="diagnostic-dialog__form" onSubmit={submit} autoComplete="off" onChange={() => setComplete(false)}>
-      <div className="diagnostic-dialog__grid"><label>Nombre<input name="name" required /></label><label>Correo electrónico<input name="email" type="email" required /></label></div>
-      <label>Organización<input name="organization" /></label>
-      <label>Tipo de necesidad<select name="need" defaultValue="" required><option value="" disabled>Seleccioná una opción</option><option>Producto existente</option><option>Consultoría estratégica</option><option>Proyecto específico</option><option>Colaboración</option><option>Otra necesidad</option></select></label>
-      <label>Descripción breve<textarea name="context" rows="3" required placeholder="Contanos brevemente sobre la operación." /></label>
+      <div className="diagnostic-dialog__grid"><label>Nombre<input name="name" placeholder="Tu nombre" required /></label><label>Correo electrónico<input name="email" type="email" placeholder="nombre@empresa.com" required /></label></div>
+      <label>Organización <span className="diagnostic-dialog__optional">(opcional)</span><input name="organization" placeholder="Nombre de la organización" /></label>
+      <label>Motivo de consulta<select name="need" value={reason} onChange={(event) => setReason(event.target.value)} required><option value="" disabled>Seleccioná una opción</option><option>Necesidad empresarial</option><option>Producto o proyecto</option><option>Colaboración estratégica</option></select></label>
+      {reason === 'Producto o proyecto' && visiblePortfolio.length > 0 && <label>Iniciativa de interés <span className="diagnostic-dialog__optional">(opcional)</span><select name="initiative" value={initiativeId} onChange={(event) => setInitiativeId(event.target.value)}><option value="">Seleccioná una iniciativa</option>{visiblePortfolio.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>}
+      <label>Contexto de la consulta<textarea name="context" rows="3" required placeholder="Describí brevemente tu situación, objetivo o iniciativa." /></label>
+      <p className="diagnostic-dialog__intro">No incluyas información confidencial ni datos personales de terceros.</p>
       {complete && <p className="diagnostic-dialog__status" role="status">Simulación completada. No se envió ni almacenó ninguna solicitud.</p>}
       <div className="diagnostic-dialog__actions"><button className="diagnostic-dialog__submit" type="submit">Simular solicitud</button><button className="diagnostic-dialog__cancel" type="button" onClick={onClose}>Cancelar</button></div>
-    </form>
+    </form></> : <p className="diagnostic-dialog__status" role="status">El canal de contacto no está disponible en este momento.</p>}
   </section></div>
 }

@@ -1,76 +1,42 @@
 <!doctype html>
-<html lang="es" class="dark">
+<html lang="es" class="dark" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>try{localStorage.removeItem('talavera-theme')}catch{}document.documentElement.dataset.theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'</script>
     <meta name="description" content="TALAVERA — Diseño e implementación de sistemas para ordenar operaciones complejas en real estate. Trazabilidad, control y claridad." />
-    <title>TALAVERA | Sistemas para Real Estate</title>
+    <title>TALAVERA | Ingeniería de sistemas para el negocio inmobiliario</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
-      .page-loader{--loader-bg:255,255,255;--loader-invert:0;position:fixed;inset:0;z-index:9999;display:flex;overflow:hidden}
-      [data-theme='dark'] .page-loader{--loader-bg:17,26,32;--loader-invert:1}
+      .page-loader{--loader-bg:16,25,30;--loader-glow:243,244,239;position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden}
       .page-loader::before{content:'';position:absolute;inset:0;background:rgb(var(--loader-bg))}
-      .page-loader__panel{position:absolute;inset:0}
-      .page-loader__panel img{position:absolute;top:50%;left:50%;width:min(65.28vw,54.4rem);max-width:none;height:auto;filter:brightness(0) invert(var(--loader-invert));transform:translate(-50%,-50%);animation:loader-logo-enter .20s ease-out both}
-      .page-loader__welcome{position:absolute;top:calc(50% + min(3.196vw, 2.652rem));left:calc(50% + min(1.8275vw, 1.5215rem));color:#101316;font-family:Manrope,sans-serif;font-size:min(4.08vw, 3.4rem);font-weight:200;line-height:1;letter-spacing:min(.9vw, .75rem);white-space:nowrap;animation:loader-welcome-enter .20s ease-out both}
-      [data-theme='dark'] .page-loader__welcome{color:#f2f6f7}
-      @keyframes loader-welcome-enter{
-        0%{opacity:0;filter:drop-shadow(0 0 10px #344f63) drop-shadow(0 0 22px #718a9b) blur(18px);transform:scaleX(1.08)}
-        35%{opacity:.55;filter:drop-shadow(0 0 8px #344f63) drop-shadow(0 0 18px #718a9b) blur(10px)}
-        70%{opacity:.9;filter:drop-shadow(0 0 5px #344f63) drop-shadow(0 0 10px #718a9b) blur(3px)}
-        100%{opacity:1;filter:drop-shadow(0 0 0 transparent) drop-shadow(0 0 0 transparent) blur(0);transform:scaleX(1)}
-      }
+      .page-loader__panel{position:absolute;inset:0;display:grid;place-items:center}
+      .page-loader__panel img{width:min(65.28vw,54.4rem);max-width:none;height:auto;filter:brightness(0) invert(1);animation:loader-logo-enter .2s ease-out both}
       @keyframes loader-logo-enter{
-        0%{opacity:0;filter:brightness(0) invert(var(--loader-invert)) drop-shadow(0 0 10px #344f63) drop-shadow(0 0 22px #718a9b) blur(18px);transform:translate(-50%,-50%) scaleX(1.08)}
-        35%{opacity:.55;filter:brightness(0) invert(var(--loader-invert)) drop-shadow(0 0 8px #344f63) drop-shadow(0 0 18px #718a9b) blur(10px)}
-        70%{opacity:.9;filter:brightness(0) invert(var(--loader-invert)) drop-shadow(0 0 5px #344f63) drop-shadow(0 0 10px #718a9b) blur(3px)}
-        100%{opacity:1;filter:brightness(0) invert(var(--loader-invert)) drop-shadow(0 0 0 transparent) drop-shadow(0 0 0 transparent) blur(0);transform:translate(-50%,-50%) scaleX(1)}
+        0%{opacity:0;filter:brightness(0) invert(1) drop-shadow(0 0 10px rgba(var(--loader-glow),.25)) blur(18px);transform:scaleX(1.08)}
+        35%{opacity:.55;filter:brightness(0) invert(1) drop-shadow(0 0 8px rgba(var(--loader-glow),.2)) blur(10px)}
+        70%{opacity:.9;filter:brightness(0) invert(1) drop-shadow(0 0 5px rgba(var(--loader-glow),.12)) blur(3px)}
+        100%{opacity:1;filter:brightness(0) invert(1) drop-shadow(0 0 0 transparent) blur(0);transform:scaleX(1)}
       }
       .page-loader.is-opening{pointer-events:none}
-      .page-loader.is-opening::before{animation:loader-background 1.5s ease-in-out both}
-      .page-loader.is-opening .page-loader__panel:first-child{animation:loader-gate-left 1.5s both}
-      .page-loader.is-opening .page-loader__panel:last-child{animation:loader-gate-right 1.5s both}
-      @keyframes loader-background{
-        0%{background:rgba(var(--loader-bg),1);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-        45%{background:rgba(var(--loader-bg),.68);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-        74%{background:rgba(var(--loader-bg),.4);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-        100%{background:rgba(var(--loader-bg),0);backdrop-filter:blur(0);-webkit-backdrop-filter:blur(0)}
+      .page-loader.is-opening img{animation:loader-logo-exit .65s ease-out both}
+      @keyframes loader-logo-exit{
+        0%{opacity:1;filter:brightness(0) invert(1) blur(0);transform:scaleX(1)}
+        15%{opacity:1;filter:brightness(0) invert(1) blur(6px)}
+        55%{opacity:.5;filter:brightness(0) invert(1) blur(18px)}
+        100%{opacity:0;filter:brightness(0) invert(1) blur(28px);transform:scaleX(1.08)}
       }
-      @keyframes loader-gate-left{
-        0%{transform:translateX(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}
-        40%{transform:translate(calc(var(--logo-dx, -40vw) - 2vw),0);animation-timing-function:ease-out}
-        50%{transform:translate(var(--logo-dx, -40vw),0)}
-        58%{opacity:1;transform:translate(var(--logo-dx, -40vw),0);animation-timing-function:cubic-bezier(.76,0,.24,1)}
-        100%{opacity:0;transform:translate(var(--logo-dx, -40vw),var(--logo-dy, -40vh))}
-      }
-      @keyframes loader-gate-right{
-        0%{transform:translateX(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}
-        40%{transform:translateX(22%);animation-timing-function:ease-out}
-        50%{transform:translateX(20%)}
-        58%{transform:translateX(20%);animation-timing-function:cubic-bezier(.76,0,.24,1)}
-        100%{transform:translate(20%,100vh)}
-      }
-      @media(max-width:750px){
-        .page-loader.is-opening::before{animation-duration:.20s}
-        .page-loader.is-opening .page-loader__panel:first-child,.page-loader.is-opening .page-loader__panel:last-child{animation:loader-mobile-exit .20s ease-in both}
-        @keyframes loader-mobile-exit{
-          0%{opacity:1;filter:blur(0) drop-shadow(0 0 0 transparent)}
-          55%{opacity:.7;filter:blur(4px) drop-shadow(0 0 8px #718a9b)}
-          100%{opacity:0;filter:blur(18px) drop-shadow(0 0 18px #718a9b)}
-        }
-      }
-      @media(prefers-reduced-motion:reduce){.page-loader__panel img,.page-loader__welcome,.page-loader.is-opening::before,.page-loader.is-opening .page-loader__panel{animation:none}}
+      .page-loader.is-opening::before{animation:loader-background .8s .1s ease-in-out both}
+      @keyframes loader-background{from{opacity:1}to{opacity:0}}
+      @media(prefers-reduced-motion:reduce){.page-loader__panel img,.page-loader.is-opening img,.page-loader.is-opening::before{animation:none}}
     </style>
     <noscript><style>.page-loader{display:none}</style></noscript>
   </head>
   <body>
     <div class="page-loader" id="page-loader" role="status" aria-label="Cargando Talavera">
-      <div class="page-loader__panel"><img src="/src/assets/logoBlanco.svg" alt="" /></div>
-      <div class="page-loader__panel"><span class="page-loader__welcome" aria-hidden="true">Bienvenido</span></div>
+      <div class="page-loader__panel"><img src="/src/assets/logoLoader.svg" alt="" /></div>
     </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

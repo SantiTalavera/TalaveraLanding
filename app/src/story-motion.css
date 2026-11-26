@@ -1,0 +1,154 @@
+@property --hero-out { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --clients-opacity { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --capabilities-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --heading-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --copy-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --visual-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --products-out { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --faq-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --faq-intro-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --faq-list-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --faq-out { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --cta-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --cta-label-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --cta-title-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --cta-copy-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --cta-button-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --footer-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+@property --footer-bottom-in { syntax: "<number>"; inherits: true; initial-value: 0; }
+
+@keyframes story-progress {
+  0% { --hero-out: 0; --clients-opacity: 0; --heading-in: 0; --copy-in: 0; --visual-in: 0; --products-out: 0; --faq-in: 0; --faq-intro-in: 0; --faq-list-in: 0; --faq-out: 0; --cta-in: 0; --cta-label-in: 0; --cta-title-in: 0; --cta-copy-in: 0; --cta-button-in: 0; --footer-in: 0; --footer-bottom-in: 0; }
+  3.2% { --hero-out: 0; }
+  8% { --clients-opacity: 0; }
+  10.4% { --hero-out: 1; }
+  12% { --clients-opacity: 1; }
+  20% { --clients-opacity: 1; }
+  24% { --clients-opacity: 0; --capabilities-in: 0; }
+  27% { --capabilities-in: 1; }
+  30% { --capabilities-in: 1; }
+  33% { --capabilities-in: 0; --heading-in: 0; --copy-in: 0; --visual-in: 0; }
+  36% { --heading-in: 1; }
+  38% { --copy-in: 1; }
+  40% { --visual-in: 1; }
+  42.4% { --products-out: 0; }
+  46% { --faq-in: 0; --faq-intro-in: 0; }
+  49.6% { --faq-list-in: 0; }
+  54% { --faq-intro-in: 1; }
+  55.6% { --products-out: 1; }
+  59% { --faq-in: 1; --faq-list-in: 1; }
+  63% { --faq-out: 0; }
+  66% { --cta-in: 0; --cta-label-in: 0; }
+  68% { --cta-title-in: 0; }
+  70.4% { --cta-copy-in: 0; }
+  71% { --cta-label-in: 1; }
+  72.4% { --cta-button-in: 0; }
+  74% { --cta-title-in: 1; }
+  75.6% { --faq-out: 1; }
+  76.6% { --cta-copy-in: 1; }
+  79% { --cta-in: 1; --cta-button-in: 1; }
+  86% { --footer-in: 0; }
+  91% { --footer-bottom-in: 0; }
+  99% { --footer-in: 1; --footer-bottom-in: 1; }
+  100% { --hero-out: 1; --clients-opacity: 0; --heading-in: 1; --copy-in: 1; --visual-in: 1; --products-out: 1; --faq-in: 1; --faq-intro-in: 1; --faq-list-in: 1; --faq-out: 1; --cta-in: 1; --cta-label-in: 1; --cta-title-in: 1; --cta-copy-in: 1; --cta-button-in: 1; --footer-in: 1; --footer-bottom-in: 1; }
+}
+
+@supports (animation-timeline: view()) and (view-timeline-name: --story) and (interactivity: inert) {
+@media (min-width: 1051px) and (min-height: 800px) and (prefers-reduced-motion: no-preference) {
+  .story-stage--active { view-timeline-name: --story; view-timeline-axis: block; }
+  .story-stage--active .story-stage__viewport { animation: story-progress linear both; animation-timeline: --story; animation-range: contain; }
+  @keyframes hero-interactive { 0%, 9.6% { interactivity: auto; } 9.61%, 100% { interactivity: inert; } }
+  .story-stage--active .hero { animation: hero-interactive linear both; animation-timeline: --story; animation-range: contain; }
+  @keyframes clients-interactive { 0%, 11.19% { interactivity: inert; } 11.2%, 20.8% { interactivity: auto; } 20.81%, 100% { interactivity: inert; } }
+  .story-stage--active .clients { animation: clients-interactive linear both; animation-timeline: --story; animation-range: contain; }
+  @keyframes capabilities-interactive { 0%, 26.99% { interactivity: inert; } 27%, 30% { interactivity: auto; } 30.01%, 100% { interactivity: inert; } }
+  .story-stage--active .capabilities { animation: capabilities-interactive linear both; animation-timeline: --story; animation-range: contain; }
+  @keyframes products-interactive { 0%, 38.99% { interactivity: inert; } 39%, 44.38% { interactivity: auto; } 44.39%, 100% { interactivity: inert; } }
+  .story-stage--active .products { animation: products-interactive linear both; animation-timeline: --story; animation-range: contain; }
+  @keyframes faq-interactive { 0%, 57.04% { interactivity: inert; } 57.05%, 64.89% { interactivity: auto; } 64.9%, 100% { interactivity: inert; } }
+  .story-stage--active .faq { animation: faq-interactive linear both; animation-timeline: --story; animation-range: contain; }
+  @keyframes cta_final-interactive { 0%, 77.03999999999999% { interactivity: inert; } 77.05%, 100% { interactivity: auto; } }
+  .story-stage--active .cta-final { animation: cta_final-interactive linear both; animation-timeline: --story; animation-range: contain; }
+  @keyframes footer-interactive { 0%, 97.03999999999999% { interactivity: inert; } 97.05%, 100% { interactivity: auto; } }
+  .story-stage--active .footer { animation: footer-interactive linear both; animation-timeline: --story; animation-range: contain; }
+}
+}
+
+/* Shorter narrative when both optional sections are unavailable. */
+@keyframes compact-story-progress {
+  0%, 8% { --hero-out: 0; }
+  22%, 100% { --hero-out: 1; }
+  12% { --capabilities-in: 0; }
+  25%, 37% { --capabilities-in: 1; }
+  47%, 100% { --capabilities-in: 0; }
+  36% { --faq-in: 0; --faq-intro-in: 0; --faq-list-in: 0; }
+  51%, 100% { --faq-in: 1; --faq-intro-in: 1; }
+  57%, 100% { --faq-list-in: 1; }
+  62% { --faq-out: 0; }
+  75%, 100% { --faq-out: 1; }
+  65% { --cta-in: 0; --cta-label-in: 0; --cta-title-in: 0; --cta-copy-in: 0; --cta-button-in: 0; }
+  78%, 100% { --cta-in: 1; --cta-label-in: 1; --cta-title-in: 1; }
+  82%, 100% { --cta-copy-in: 1; --cta-button-in: 1; }
+  86% { --footer-in: 0; --footer-bottom-in: 0; }
+  99%, 100% { --footer-in: 1; --footer-bottom-in: 1; }
+}
+@keyframes compact-hero-interactive { 0%, 18% { interactivity: auto; } 18.01%, 100% { interactivity: inert; } }
+@keyframes compact-capabilities-interactive { 0%, 23% { interactivity: inert; } 23.01%, 40% { interactivity: auto; } 40.01%, 100% { interactivity: inert; } }
+@keyframes compact-faq-interactive { 0%, 50% { interactivity: inert; } 50.01%, 65% { interactivity: auto; } 65.01%, 100% { interactivity: inert; } }
+@keyframes compact-cta-interactive { 0%, 77% { interactivity: inert; } 77.01%, 100% { interactivity: auto; } }
+@supports (animation-timeline: view()) and (view-timeline-name: --story) and (interactivity: inert) {
+  @media (min-width: 1051px) and (min-height: 800px) and (prefers-reduced-motion: no-preference) {
+    .story-stage--compact { height: calc(var(--story-height) * 4.5); }
+    .story-stage--compact .story-stage__viewport { animation-name: compact-story-progress; }
+    .story-stage--compact .hero { animation-name: compact-hero-interactive; }
+    .story-stage--compact .capabilities { animation-name: compact-capabilities-interactive; }
+    .story-stage--compact .faq { animation-name: compact-faq-interactive; }
+    .story-stage--compact .cta-final { animation-name: compact-cta-interactive; }
+  }
+}
+
+/* Five-section narrative: portfolio previews without an organizations stage. */
+@keyframes portfolio-story-progress {
+  0%, 5% { --hero-out: 0; }
+  16%, 100% { --hero-out: 1; }
+  10% { --capabilities-in: 0; }
+  20%, 29% { --capabilities-in: 1; }
+  36%, 100% { --capabilities-in: 0; }
+  29% { --heading-in: 0; }
+  35%, 100% { --heading-in: 1; }
+  31% { --copy-in: 0; }
+  37%, 100% { --copy-in: 1; }
+  33% { --visual-in: 0; }
+  39%, 100% { --visual-in: 1; }
+  47% { --products-out: 0; }
+  56%, 100% { --products-out: 1; }
+  48% { --faq-in: 0; --faq-intro-in: 0; }
+  56%, 100% { --faq-in: 1; --faq-intro-in: 1; }
+  52% { --faq-list-in: 0; }
+  58%, 100% { --faq-list-in: 1; }
+  67% { --faq-out: 0; }
+  75%, 100% { --faq-out: 1; }
+  69% { --cta-in: 0; --cta-label-in: 0; --cta-title-in: 0; --cta-copy-in: 0; --cta-button-in: 0; }
+  76%, 100% { --cta-in: 1; --cta-label-in: 1; --cta-title-in: 1; }
+  78%, 100% { --cta-copy-in: 1; }
+  81%, 100% { --cta-button-in: 1; }
+  87% { --footer-in: 0; --footer-bottom-in: 0; }
+  99%, 100% { --footer-in: 1; --footer-bottom-in: 1; }
+}
+@keyframes portfolio-hero-interactive { 0%, 13% { interactivity: auto; } 13.01%, 100% { interactivity: inert; } }
+@keyframes portfolio-capabilities-interactive { 0%, 18% { interactivity: inert; } 18.01%, 31% { interactivity: auto; } 31.01%, 100% { interactivity: inert; } }
+@keyframes portfolio-products-interactive { 0%, 38% { interactivity: inert; } 38.01%, 50% { interactivity: auto; } 50.01%, 100% { interactivity: inert; } }
+@keyframes portfolio-faq-interactive { 0%, 56% { interactivity: inert; } 56.01%, 69% { interactivity: auto; } 69.01%, 100% { interactivity: inert; } }
+@keyframes portfolio-cta-interactive { 0%, 79% { interactivity: inert; } 79.01%, 100% { interactivity: auto; } }
+@supports (animation-timeline: view()) and (view-timeline-name: --story) and (interactivity: inert) {
+  @media (min-width: 1051px) and (min-height: 800px) and (prefers-reduced-motion: no-preference) {
+    .story-stage--portfolio { height: calc(var(--story-height) * 5.5); }
+    .story-stage--portfolio .story-stage__viewport { animation-name: portfolio-story-progress; }
+    .story-stage--portfolio .hero { animation-name: portfolio-hero-interactive; }
+    .story-stage--portfolio .capabilities { animation-name: portfolio-capabilities-interactive; }
+    .story-stage--portfolio .products { animation-name: portfolio-products-interactive; }
+    .story-stage--portfolio .faq { animation-name: portfolio-faq-interactive; }
+    .story-stage--portfolio .cta-final { animation-name: portfolio-cta-interactive; }
+  }
+}
+
