@@ -2,7 +2,7 @@
 <html lang="es" class="dark" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/src/assets/brand/talavera-white.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="TALAVERA — Diseño e implementación de sistemas para ordenar operaciones complejas en real estate. Trazabilidad, control y claridad." />
     <title>TALAVERA | Ingeniería de sistemas para el negocio inmobiliario</title>
@@ -13,20 +13,20 @@
       .page-loader{--loader-bg:16,25,30;--loader-glow:243,244,239;position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden}
       .page-loader::before{content:'';position:absolute;inset:0;background:rgb(var(--loader-bg))}
       .page-loader__panel{position:absolute;inset:0;display:grid;place-items:center}
-      .page-loader__panel img{width:min(65.28vw,54.4rem);max-width:none;height:auto;filter:brightness(0) invert(1);animation:loader-logo-enter .2s ease-out both}
+      .page-loader__panel img{width:min(65.28vw,54.4rem);max-width:none;height:auto;filter:none;animation:loader-logo-enter .2s ease-out both}
       @keyframes loader-logo-enter{
-        0%{opacity:0;filter:brightness(0) invert(1) drop-shadow(0 0 10px rgba(var(--loader-glow),.25)) blur(18px);transform:scaleX(1.08)}
-        35%{opacity:.55;filter:brightness(0) invert(1) drop-shadow(0 0 8px rgba(var(--loader-glow),.2)) blur(10px)}
-        70%{opacity:.9;filter:brightness(0) invert(1) drop-shadow(0 0 5px rgba(var(--loader-glow),.12)) blur(3px)}
-        100%{opacity:1;filter:brightness(0) invert(1) drop-shadow(0 0 0 transparent) blur(0);transform:scaleX(1)}
+        0%{opacity:0;filter:drop-shadow(0 0 10px rgba(var(--loader-glow),.25)) blur(18px)}
+        35%{opacity:.55;filter:drop-shadow(0 0 8px rgba(var(--loader-glow),.2)) blur(10px)}
+        70%{opacity:.9;filter:drop-shadow(0 0 5px rgba(var(--loader-glow),.12)) blur(3px)}
+        100%{opacity:1;filter:drop-shadow(0 0 0 transparent) blur(0)}
       }
       .page-loader.is-opening{pointer-events:none}
       .page-loader.is-opening img{animation:loader-logo-exit .65s ease-out both}
       @keyframes loader-logo-exit{
-        0%{opacity:1;filter:brightness(0) invert(1) blur(0);transform:scaleX(1)}
-        15%{opacity:1;filter:brightness(0) invert(1) blur(6px)}
-        55%{opacity:.5;filter:brightness(0) invert(1) blur(18px)}
-        100%{opacity:0;filter:brightness(0) invert(1) blur(28px);transform:scaleX(1.08)}
+        0%{opacity:1;filter:blur(0)}
+        15%{opacity:1;filter:blur(6px)}
+        55%{opacity:.5;filter:blur(18px)}
+        100%{opacity:0;filter:blur(28px)}
       }
       .page-loader.is-opening::before{animation:loader-background .8s .1s ease-in-out both}
       @keyframes loader-background{from{opacity:1}to{opacity:0}}
@@ -36,7 +36,7 @@
   </head>
   <body>
     <div class="page-loader" id="page-loader" role="status" aria-label="Cargando Talavera">
-      <div class="page-loader__panel"><img src="/src/assets/logoLoader.svg" alt="" /></div>
+      <div class="page-loader__panel"><img src="/src/assets/brand/talavera-white.png" alt="" /></div>
     </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

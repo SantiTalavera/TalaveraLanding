@@ -18,6 +18,7 @@
 .device-phone__home{position:absolute;bottom:.75rem;left:35%;width:30%;height:3px;border-radius:3px;background:#bfc7ca}
 .device-phone__interface{padding:1.9rem .75rem 1rem;color:#ccd5d8;font-size:.58rem}
 .device-phone__masthead{display:flex;justify-content:space-between;font-weight:700;letter-spacing:.1em;font-size:.55rem;margin-bottom:1.3rem}
+.device-preview .device-phone__masthead img{width:5rem;height:auto;aspect-ratio:644/167;object-fit:contain}
 .device-phone__interface>p{font-size:.45rem;letter-spacing:.12em;color:#c3ad6c;margin-bottom:.45rem}
 .device-phone__interface>strong{display:block;font-size:.85rem;font-weight:500;line-height:1.3;margin-bottom:1rem}
 .device-phone__interface svg{width:100%;height:6rem;color:#9daeb7;margin-bottom:.6rem}
