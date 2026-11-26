@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1280" viewBox="0 0 1920 1280">
+  <defs>
+    <path id="sky" d="M710 0H1260L1190 145 1350 380 1570 630 1640 725 1530 840 1410 670 1360 580 1260 445 1090 560 1070 470 865 330 795 375 610 190 180 400 25 410V315L350 200Z"/>
+    <clipPath id="sky-only"><use href="#sky"/></clipPath>
+    <filter id="feather" x="-10%" y="-10%" width="120%" height="120%">
+      <feMorphology operator="erode" radius="72"/>
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+  <!-- Feather inward; the outer clip prevents blur from leaking onto facades. -->
+  <g clip-path="url(#sky-only)"><use href="#sky" fill="white" filter="url(#feather)"/></g>
+</svg>

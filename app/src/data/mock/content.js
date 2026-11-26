@@ -23,7 +23,7 @@ const mockClients = [
   ['origen', 'Origen Distrito', logo7], ['senda', 'Senda', logo8],
   ['prisma', 'Prisma Hábitat', logo9], ['ladera', 'Ladera', logo10],
 ]
-export const clients = mockClients.map(([id, name, logo]) => ({ id, name, logo, url: `#demo/organizaciones/${id}` }))
+export const clients = mockClients.map(([id, name, logo]) => ({ id, name, logo, relation: 'demostración', url: `#demo/organizaciones/${id}` }))
 
 export const products = [
   { id: 'hoa', name: 'Sistema modular HOA', description: 'Comercialización, masterplan y administración en un sistema que conecta información, decisiones y operación.', image: hoaImage, landingUrl: '#demo/productos/hoa', status: 'active', category: 'Clubes de campo / HOA' },
@@ -39,7 +39,7 @@ export const portfolio = [
     id: 'administracion-propiedades', slug: 'administracion-propiedades', name: 'Administración de propiedades',
     category: 'Producto propio', headline: 'Todas tus propiedades. Una sola operación.',
     description: 'Un producto concebido para centralizar la información de propiedades, contratos, pagos y mantenimiento, facilitando el seguimiento de la operación patrimonial.',
-    image: propertiesImage, imageAlt: 'Mockup conceptual de gestión de inmuebles, contratos, pagos, mantenimiento y proveedores.',
+    previewDevices: ['desktop', 'mobile'], image: propertiesImage, imageAlt: 'Mockup conceptual de gestión de inmuebles, contratos, pagos, mantenimiento y proveedores.',
     ctaLabel: 'Conocer el producto', landingUrl: '#demo/portfolio/administracion-propiedades', status: 'proyectado', visibility: 'demo',
   },
   {
@@ -53,7 +53,7 @@ export const portfolio = [
     id: 'cclf', slug: 'cclf', name: 'Comercialización de lotes',
     category: 'Proyecto colaborativo', headline: 'De la disponibilidad a la venta.',
     description: 'Sistema orientado a integrar la gestión de lotes, inmobiliarias, prioridades, reservas y ventas sobre una representación digital del desarrollo inmobiliario.',
-    image: cclfImage, imageAlt: 'Masterplan conceptual con lotes por estado y panel de comercialización.',
+    previewDevices: ['desktop', 'mobile'], image: cclfImage, imageAlt: 'Masterplan conceptual con lotes por estado y panel de comercialización.',
     ctaLabel: 'Conocer el proyecto', landingUrl: '#demo/portfolio/cclf', status: 'colaborativo', visibility: 'demo',
   },
 ]

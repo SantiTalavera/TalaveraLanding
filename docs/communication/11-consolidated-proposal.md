@@ -1,3 +1,5 @@
+> **Registro historico, sustituido:** este documento conserva propuestas y observaciones anteriores, no la especificacion vigente. Consultar [decisiones aprobadas](12-decisions-pending.md), [auditoria](10-editorial-audit.md) y [preparacion de publicacion](../implementation/release-readiness.md).
+
 # Propuesta consolidada de la landing
 
 **Estado:** borrador para revisión humana. El header recoge decisiones ya aprobadas; todo el copy propuesto para las ocho secciones restantes y sus comportamientos futuros está pendiente de aprobación. Las condiciones de visibilidad y los estados del modal son parte de la propuesta, no funcionalidades existentes. Fuente: [Tesis de la marca](https://app.notion.com/p/41cbac03703980bb8cc3e18250644c4f).

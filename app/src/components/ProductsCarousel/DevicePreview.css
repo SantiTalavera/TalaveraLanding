@@ -1,0 +1,29 @@
+.device-preview{width:100%;min-width:0}
+.device-preview__selector{display:flex;justify-content:center;gap:.3rem;margin-bottom:1.2rem}
+.device-preview__selector button{padding:.5rem .8rem;border:1px solid transparent;border-radius:2rem;color:#acb9bf;font-size:.67rem;transition:background .2s,color .2s}
+.device-preview__selector button[aria-pressed=true]{background:#ffffff0c;border-color:#ffffff35;color:#f1d269}
+.device-preview__selector button:focus-visible{outline:2px solid #f1d269;outline-offset:3px}
+.device-preview__stage{--device-stage-height:clamp(22rem,34vw,32rem);position:relative;display:flex;justify-content:center;align-items:center;height:var(--device-stage-height);padding:1rem 0 1.5rem;isolation:isolate}
+.device-preview__stage::after{content:'';position:absolute;bottom:.25rem;left:8%;right:8%;height:1.5rem;border-radius:50%;background:#0007;filter:blur(15px);z-index:-1}
+.device-laptop{width:100%;max-width:calc((var(--device-stage-height) - 4rem) * 1.6);position:relative}
+.device-laptop__lid{position:relative;width:94%;margin:auto;border-radius:1rem 1rem .3rem .3rem;padding:1rem .55rem .65rem;background:linear-gradient(120deg,#889399,#262c31 2%,#090c0e 40%,#222a2f 98%,#7e898f);border:1px solid #8c969c;box-shadow:inset 0 0 0 2px #14191c,0 1rem 2rem #0004}
+.device-laptop__camera{position:absolute;top:.37rem;left:50%;width:4px;height:4px;border-radius:50%;background:#253948;box-shadow:0 0 0 2px #080b0e}
+.device-laptop__screen{aspect-ratio:16/10;overflow:hidden;background:#202020;border:1px solid #000;border-radius:2px}
+.device-laptop__screen img{display:block;width:100%;height:100%;object-fit:contain}
+.device-laptop__base{position:relative;height:.65rem;border-radius:1px 1px 50% 50% / 1px 1px 90% 90%;background:linear-gradient(#c1c8cc,#7b878f 35%,#384249 85%,#89949b);border-top:1px solid #e0e4e7;box-shadow:0 5px 8px #0005}
+.device-laptop__base::before{content:'';position:absolute;top:0;left:43%;width:14%;height:40%;background:linear-gradient(#4c575f,#98a2a8);border-radius:0 0 6px 6px}
+.device-phone{position:relative;width:clamp(11rem,14vw,13rem);height:auto;aspect-ratio:1/2;padding:.36rem;border-radius:1.9rem;background:linear-gradient(120deg,#adb5b9,#3e474d 12%,#14191d 50%,#6d787e);border:1px solid #8e999f;box-shadow:inset 0 0 0 2px #171c20,0 1rem 2rem #0007;flex-shrink:0}
+.device-phone__screen{height:100%;overflow:hidden;border:3px solid #070a0c;border-radius:1.55rem;background:#20292e}
+.device-phone__camera{position:absolute;top:.8rem;left:36%;width:28%;height:.6rem;border-radius:1rem;background:#080c0e}
+.device-phone__home{position:absolute;bottom:.75rem;left:35%;width:30%;height:3px;border-radius:3px;background:#bfc7ca}
+.device-phone__interface{padding:1.9rem .75rem 1rem;color:#ccd5d8;font-size:.58rem}
+.device-phone__masthead{display:flex;justify-content:space-between;font-weight:700;letter-spacing:.1em;font-size:.55rem;margin-bottom:1.3rem}
+.device-phone__interface>p{font-size:.45rem;letter-spacing:.12em;color:#c3ad6c;margin-bottom:.45rem}
+.device-phone__interface>strong{display:block;font-size:.85rem;font-weight:500;line-height:1.3;margin-bottom:1rem}
+.device-phone__interface svg{width:100%;height:6rem;color:#9daeb7;margin-bottom:.6rem}
+.device-phone__row{display:flex;justify-content:space-between;padding:.65rem .4rem;margin:.4rem 0;background:#ffffff07;border:1px solid #ffffff12;border-radius:.25rem}
+.device-phone__interface>small{display:block;margin-top:1rem;font-size:.36rem;letter-spacing:.12em;color:#92a1a8}
+.device-preview__stage--both .device-laptop{width:87%;margin-right:9%}
+.device-preview__stage--both .device-phone{position:absolute;right:0;bottom:.5rem;transform:scale(.88);transform-origin:bottom right}
+.device-preview__caption{text-align:center;font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:#93a5af;margin-top:.6rem}
+@media(max-width:750px){.device-preview__stage{--device-stage-height:20rem}.device-preview__stage--mobile{--device-stage-height:25rem}.device-preview__selector button{font-size:.62rem;padding:.5rem .4rem}.device-preview__stage--both .device-phone{transform:scale(.75)}.device-laptop__lid{border-radius:.6rem .6rem .2rem .2rem;padding:.8rem .35rem .4rem}}

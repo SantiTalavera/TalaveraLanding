@@ -1,3 +1,5 @@
+> **Registro historico, sustituido:** este documento conserva propuestas y observaciones anteriores, no la especificacion vigente. Consultar [decisiones aprobadas](12-decisions-pending.md), [auditoria](10-editorial-audit.md) y [preparacion de publicacion](../implementation/release-readiness.md).
+
 # Portfolio — propuesta editorial
 
 **Estado:** propuesta pendiente de aprobación humana. Fuente: [Tesis de la marca](https://app.notion.com/p/41cbac03703980bb8cc3e18250644c4f), secciones 5, 7 y 8. Esta propuesta no constituye autorización para publicar las iniciativas.

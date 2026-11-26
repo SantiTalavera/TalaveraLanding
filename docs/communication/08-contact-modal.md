@@ -1,3 +1,5 @@
+> **Registro historico, sustituido:** este documento conserva propuestas y observaciones anteriores, no la especificacion vigente. Consultar [decisiones aprobadas](12-decisions-pending.md), [auditoria](10-editorial-audit.md) y [preparacion de publicacion](../implementation/release-readiness.md).
+
 # Modal de contacto comercial — propuesta editorial
 
 **Estado:** propuesta pendiente de aprobación humana. Fuente: [Tesis de la marca, §§ 4.4, 7.4 y 8.1](https://app.notion.com/p/41cbac03703980bb8cc3e18250644c4f). Los textos siguientes no describen funcionalidades ya implementadas salvo donde se indica.

@@ -1,4 +1,8 @@
-# Organizaciones — propuesta editorial
+# Organizaciones — excepción posterior y registro histórico
+
+La instrucción posterior de cierre establece el título «El valor se construye en conjunto» como excepción al título aprobado en D05 de Notion. El componente actual contiene además «Relaciones que conectan conocimiento, ingeniería y nuevas oportunidades de desarrollo»; se registra como texto observado en código, sin evidencia independiente de aprobación editorial. Esta excepción no modifica D04 ni los requisitos de clasificación inequívoca, evidencia y autorización de cada relación. La presencia en código no prueba renderizado ni publicación segura.
+
+> **Archivo histórico:** el contenido siguiente documenta una propuesta anterior sustituida donde contradice la tesis o la excepción indicada. No usarlo como especificación vigente. Ver [decisiones](12-decisions-pending.md).
 
 **Estado:** propuesta pendiente de aprobación humana. La recomendación de publicación es mantener esta sección oculta hasta verificar las relaciones y las condiciones indicadas. Fuente doctrinal: [Tesis de la marca, §§ 7.2 y 7.5](https://app.notion.com/p/41cbac03703980bb8cc3e18250644c4f).
 

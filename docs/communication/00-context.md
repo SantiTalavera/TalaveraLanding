@@ -1,3 +1,5 @@
+> **Registro historico, sustituido:** este documento conserva propuestas y observaciones anteriores, no la especificacion vigente. Consultar [decisiones aprobadas](12-decisions-pending.md), [auditoria](10-editorial-audit.md) y [preparacion de publicacion](../implementation/release-readiness.md).
+
 # Contexto doctrinal y reconocimiento
 
 Fuente principal: [Tesis de la marca](https://app.notion.com/p/41cbac03703980bb8cc3e18250644c4f), consultada íntegramente el 18 de noviembre de 2026. El documento se identifica como registro interno de fundamentos aprobados, no como copy final ni declaración de resultados.

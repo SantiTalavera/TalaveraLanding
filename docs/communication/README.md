@@ -1,7 +1,7 @@
-# TALAVERA — trabajo editorial
+# Comunicación TALAVERA
 
-Estos documentos son propuestas de revisión anteriores. Las secciones 8 y 9 de la tesis en Notion contienen el copy y la auditoría aprobados y prevalecen ante cualquier contradicción. La implementación privada está en curso; la aprobación editorial no autoriza la publicación.
+La [Tesis de marca, secciones 8 y 9](https://app.notion.com/p/41cbac03703980bb8cc3e18250644c4f), registra D01–D19 y AUD-01–AUD-06 aprobadas el 18-11-2026 y prevalece sobre las propuestas históricas de esta carpeta, con la excepción posterior del título de Organizaciones indicada en [03](03-organizations.md). La aprobación editorial no acredita implementación ni autoriza publicación.
 
-Orden de lectura: [contexto](00-context.md), [header](01-header-approved.md), [propuesta consolidada](11-consolidated-proposal.md), [auditoría](10-editorial-audit.md) y [matriz de decisiones](12-decisions-pending.md). Los archivos 02–09 contienen el razonamiento y detalle por sección.
+Consultar la [matriz](12-decisions-pending.md), la [auditoría](10-editorial-audit.md) y las [condiciones de publicación](../implementation/release-readiness.md). Los archivos 00–09 y 11 conservan propuestas históricas sustituidas cuando difieren de las fuentes actuales; no son instrucciones de implementación. La excepción no elimina exigencias de evidencia, clasificación y permisos.
 
-Fuente rectora: [Tesis de la marca](https://app.notion.com/p/41cbac03703980bb8cc3e18250644c4f), consultada el 18 de noviembre de 2026. El repositorio es un prototipo privado; datos demostrativos no constituyen evidencia comercial.
+GitHub informó que este repositorio es público el 25-11-2026. No incorporar credenciales, datos personales, materiales no autorizados ni evidencia comercial sensible; conservar respaldos privados fuera del repositorio.

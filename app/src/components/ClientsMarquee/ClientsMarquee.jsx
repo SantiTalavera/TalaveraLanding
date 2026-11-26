@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { clients } from '../../data/content'
+import { visibleClients } from '../../data/content'
+import { DEMO_MODE } from '../../data/config'
 import './ClientsMarquee.css'
 
 export default function ClientsMarquee() {
   const [paused, setPaused] = useState(false)
-  const available = clients.filter((client) => client.logo && client.url)
+  const available = visibleClients
   if (!available.length) return null
 
   // Distribute each organization once; repeated tiles are visual copies only.
@@ -30,6 +31,7 @@ export default function ClientsMarquee() {
       <div className="clients__intro">
         <h2 id="clients-heading">El valor se construye en conjunto</h2>
         <p>Relaciones que conectan conocimiento, ingeniería y nuevas oportunidades de desarrollo</p>
+        {DEMO_MODE && <p>Organizaciones ficticias con fines de demostración.</p>}
       </div>
       <div className="clients__composition">
         <div className="clients__side">{rows.map(renderRow)}</div>

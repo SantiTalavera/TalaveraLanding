@@ -1,19 +1,12 @@
-// Completar únicamente con organizaciones y destinos verificados.
+import { upcomingPortfolio } from './upcomingPortfolio'
+
+// Incorporar solo vínculos autorizados, con relation: 'cliente', 'colaboración' u 'otro'.
 export const clients = []
 
-export const products = [
-  {
-    id: 'hoa',
-    name: 'Sistema modular HOA / Clubes de campo',
-    description: 'Estructura la comercialización y las reservas, con trazabilidad sobre las decisiones de la operación.',
-    image: null,
-    landingUrl: null,
-    status: 'active',
-  },
-]
+export const products = []
 
 // Incorporar solo iniciativas autorizadas y verificadas.
-export const portfolio = []
+export const portfolio = upcomingPortfolio
 
 
 export const navigation = [

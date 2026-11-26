@@ -1,3 +1,5 @@
+> **Registro historico, sustituido:** este documento conserva propuestas y observaciones anteriores, no la especificacion vigente. Consultar [decisiones aprobadas](12-decisions-pending.md), [auditoria](10-editorial-audit.md) y [preparacion de publicacion](../implementation/release-readiness.md).
+
 # Header y navegación aprobados
 
 Registro de [Tesis de la marca, §8.1](https://app.notion.com/p/41cbac03703980bb8cc3e18250644c4f), aprobado el 18 de noviembre de 2026. No se reabre la decisión; su implementación está pendiente.

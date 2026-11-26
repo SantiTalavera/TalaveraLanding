@@ -1,3 +1,5 @@
+> **Registro historico, sustituido:** este documento conserva propuestas y observaciones anteriores, no la especificacion vigente. Consultar [decisiones aprobadas](12-decisions-pending.md), [auditoria](10-editorial-audit.md) y [preparacion de publicacion](../implementation/release-readiness.md).
+
 # Preguntas frecuentes — propuesta editorial
 
 **Estado:** propuesta pendiente de aprobación humana. Fuente doctrinal: [Tesis de la marca, §§ 4, 7 y 8](https://app.notion.com/p/41cbac03703980bb8cc3e18250644c4f).
