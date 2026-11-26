@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import './DevicePreview.css'
+import brandLogo from '../../assets/brand/talavera-white.png'
 
 function PhoneScreen({ item }) {
   const lots = item.id === 'cclf'
   return <div className="device-phone__interface">
-    <div className="device-phone__masthead">TALAVERA <span aria-hidden="true">☰</span></div>
+    <div className="device-phone__masthead"><img src={brandLogo} alt="TALAVERA" /> <span aria-hidden="true">☰</span></div>
     <p>{lots ? 'MASTERPLAN' : 'OPERACIÓN'}</p>
     <strong>{item.name}</strong>
     {lots && <svg viewBox="0 0 220 170" aria-label="Masterplan conceptual"><path d="M15 135 40 35 110 15 190 40 205 110 140 155 65 150Z M40 35 65 85 15 135 M110 15 110 70 65 85 65 150 M190 40 150 80 110 70 M205 110 150 80 140 155 M65 85 140 115 150 80" fill="none" stroke="currentColor" strokeWidth="1.5" /></svg>}
