@@ -1,4 +1,4 @@
-import logoBlanco from '../../assets/logoBlanco.svg'
+import logoBlanco from '../../assets/brand/talavera-white.png'
 import { socialLinks, visiblePortfolio } from '../../data/content'
 import { DEMO_MODE } from '../../data/config'
 import { isSafeDestination } from '../../data/policy'

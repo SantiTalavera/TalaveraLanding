@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { visiblePortfolio } from '../../data/content'
-import logoBlanco from '../../assets/logoBlanco.svg'
+import logoBlanco from '../../assets/brand/talavera-white.png'
 import './Navbar.css'
 
 export default function Navbar({ onDiagnosticClick }) {
